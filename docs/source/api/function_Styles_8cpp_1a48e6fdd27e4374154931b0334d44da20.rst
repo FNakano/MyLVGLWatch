@@ -1,0 +1,14 @@
+.. _exhale_function_Styles_8cpp_1a48e6fdd27e4374154931b0334d44da20:
+
+Function setupStyles()
+======================
+
+- Defined in :ref:`file__home_fabio_Arduino_MyLvglWatch-20220910_Styles.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: setupStyles()
+   :project: MyLVGLWatch

@@ -1,0 +1,14 @@
+.. _exhale_define_nbubb80_8c_1a8620892f90f3e089ea137e95fc54ff2e:
+
+Define NBUBB80
+==============
+
+- Defined in :ref:`file__home_fabio_Arduino_MyLvglWatch-20220910_nbubb80.c`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: NBUBB80
+   :project: MyLVGLWatch

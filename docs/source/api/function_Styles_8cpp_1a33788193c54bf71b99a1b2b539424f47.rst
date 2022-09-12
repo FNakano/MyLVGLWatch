@@ -1,0 +1,14 @@
+.. _exhale_function_Styles_8cpp_1a33788193c54bf71b99a1b2b539424f47:
+
+Function LV_FONT_DECLARE(nbubb80)
+=================================
+
+- Defined in :ref:`file__home_fabio_Arduino_MyLvglWatch-20220910_Styles.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: LV_FONT_DECLARE(nbubb80)
+   :project: MyLVGLWatch
