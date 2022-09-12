@@ -16,10 +16,6 @@ Welcome to MyLVGLWatch's documentation!
 
 The source-code repository is: https://github.com/FNakano/MyLVGLWatch
 
-References to ReST: https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#images, 
-
-References to source-code documentation: https://doxygen.nl/manual/docblocks.html
-
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
