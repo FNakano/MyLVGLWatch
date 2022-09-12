@@ -1,12 +1,18 @@
 A LVGL + TTGO T-Watch test with documentation
 =============================================
 
-1. Started by cloning RTD template: https://docs.readthedocs.io/en/stable/tutorial/ into github repository;
-2. Clone github repository to local directory;
-2. In the local copy: adapt ``conf.py`` (changed project name, author, ...);
-3. In the local copy: Remove ``lumache.py``;
-4. In the local copy: create folder ``src``, containing test source code;
-5. In the local copy: copy documentation (generated using ``exhale``, ``breathe``, ``doxygen`` and ``sphinx``) into ``docs/source``;
+#. Started by cloning RTD template: https://docs.readthedocs.io/en/stable/tutorial/ into github repository;
+#. Clone github repository to local directory;
+#. In the local copy: adapt ``conf.py`` (changed project name, author, ...);
+#. In the local copy: Remove ``lumache.py``;
+#. In the local copy: create folder ``src``, containing test source code;
+#. In the local copy: copy documentation (generated using ``exhale``, ``breathe``, ``doxygen`` and ``sphinx``) into ``docs/source``;
    - replaced ``index.rst`` and created/copied folder ``api``;
-6. Add, commit, push;
-7. Deploy to RTD;
+#. Add, commit, push;
+#. Deploy to RTD;
+
+Result: The file hierarchy is accessed in https://mylvglwatch.readthedocs.io/en/latest/api/library_root.html# but the documentation embedded as comments in the source-code is not shown. 
+
+#. Change ``conf.py`` to run `breathe`;
+#. add folder ``_doxygen`` and its contents;
+

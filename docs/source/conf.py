@@ -17,6 +17,7 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
     'sphinx.ext.intersphinx',
+    'breathe',    #FN
 ]
 
 intersphinx_mapping = {
@@ -33,3 +34,9 @@ html_theme = 'sphinx_rtd_theme'
 
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
+
+# Setup the breathe extension FN
+breathe_projects = {
+    "MyLVGLWatch": "./_doxygen/xml"
+}
+breathe_default_project = "MyLVGLWatch"

@@ -1,0 +1,274 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="HardwareAbstraction_8h" kind="file" language="C++">
+    <compoundname>HardwareAbstraction.h</compoundname>
+    <includes refid="config_8h" local="yes">config.h</includes>
+    <includedby refid="DateTimeScreen_8cpp" local="yes">/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.cpp</includedby>
+    <includedby refid="HardwareAbstraction_8cpp" local="yes">/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.cpp</includedby>
+    <includedby refid="MyLvglWatch-20220910_8ino" local="yes">/home/fabio/Arduino/MyLvglWatch-20220910/MyLvglWatch-20220910.ino</includedby>
+    <includedby refid="WSScreen_8cpp" local="yes">/home/fabio/Arduino/MyLvglWatch-20220910/WSScreen.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.h</label>
+        <link refid="HardwareAbstraction_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>LilyGoWatch.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.cpp</label>
+        <link refid="DateTimeScreen_8cpp"/>
+      </node>
+      <node id="3">
+        <label>/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.cpp</label>
+        <link refid="HardwareAbstraction_8cpp"/>
+      </node>
+      <node id="1">
+        <label>/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.h</label>
+        <link refid="HardwareAbstraction_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="HardwareAbstraction_8h_1a0efcfb9bdf81cceb5d23c3edbee33b38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setupHardware</definition>
+        <argsstring>()</argsstring>
+        <name>setupHardware</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialize hardware for use. Call it in setup() function. </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Clear IRQ unprocessed first</para>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.h" line="10" column="6" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.cpp" bodystart="18" bodyend="36" declfile="/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.h" declline="10" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="HardwareAbstraction_8h_1ad818ce1edea73bf8ef4a499a068164f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setDisplayBrightness</definition>
+        <argsstring>(uint8_t b)</argsstring>
+        <name>setDisplayBrightness</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set display brightness. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>brightness value from 0 to 255. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.h" line="16" column="6" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.cpp" bodystart="43" bodyend="45" declfile="/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.h" declline="16" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="HardwareAbstraction_8h_1a67f7625bcb9b4bcc6d60a064b68e6962" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void turnDisplayOn</definition>
+        <argsstring>()</argsstring>
+        <name>turnDisplayOn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Turn display on </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.h" line="21" column="6" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.cpp" bodystart="56" bodyend="58" declfile="/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.h" declline="21" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="HardwareAbstraction_8h_1a21c67f399d0244c428074fe0bdd75c29" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void turnDisplayOff</definition>
+        <argsstring>()</argsstring>
+        <name>turnDisplayOff</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Turn display off </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.h" line="26" column="6" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.cpp" bodystart="73" bodyend="75" declfile="/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.h" declline="26" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="HardwareAbstraction_8h_1ab9d025edc2a2108cc9426fcf7b85b0f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void keepActive</definition>
+        <argsstring>(bool newValue)</argsstring>
+        <name>keepActive</name>
+        <param>
+          <type>bool</type>
+          <declname>newValue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the hardware to stay active (avoid entering deepsleep) or no (may enter deepsleep). Deepsleep is a low-power mode: hardware is almost shut-off. It can be woken-up by touching the screen. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>newValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true: stay active; false: may enter deepsleep; </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.h" line="35" column="6" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.cpp" bodystart="47" bodyend="49" declfile="/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.h" declline="35" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="HardwareAbstraction_8h_1abcda83bea7c0793e4aca650e1154bb4a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool keepActive</definition>
+        <argsstring>()</argsstring>
+        <name>keepActive</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Query if the hardware is set to stay active (avoid entering deepsleep) or no (may enter deepsleep). Deepsleep is a low-power mode: hardware is almost shut-off. It can be woken-up by touching the screen. <simplesect kind="return"><para>true: stay active; false: may enter deepsleep; </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.h" line="44" column="6" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.cpp" bodystart="51" bodyend="54" declfile="/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.h" declline="44" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="HardwareAbstraction_8h_1a3c3f5c277a7b86fc13d6a93e319fda8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* hourMinute</definition>
+        <argsstring>()</argsstring>
+        <name>hourMinute</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get current time. It is expected that new functions (eg. that return different formats) would be written in this file. <simplesect kind="return"><para>hour and minute as a string HH:MM </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.h" line="50" column="12" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.cpp" bodystart="60" bodyend="63" declfile="/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.h" declline="50" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="HardwareAbstraction_8h_1a8e09ea686ea49312846799fb6f51f47b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* ymd</definition>
+        <argsstring>()</argsstring>
+        <name>ymd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get current date. It is expected that new functions (eg. that return different formats) would be written in this file. <simplesect kind="return"><para>year monty day in the month as a string YYYY-MM-DD </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.h" line="56" column="12" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.cpp" bodystart="65" bodyend="67" declfile="/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.h" declline="56" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="HardwareAbstraction_8h_1ab7b5eea102b664f1b0c79df918fa337b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int8_t</type>
+        <definition>int8_t batPercentage</definition>
+        <argsstring>()</argsstring>
+        <name>batPercentage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get battery charge in percent. <simplesect kind="return"><para>number 0-100 percent </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.h" line="62" column="8" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.cpp" bodystart="69" bodyend="71" declfile="/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.h" declline="62" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="HardwareAbstraction_8h_1a3d333c5a3d38fce478f9b973ab06b294" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void isr</definition>
+        <argsstring>()</argsstring>
+        <name>isr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function executed when a hardware event occurs (ex. hardware button, touch screen, accelerometer, ...) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.h" line="67" column="6" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.cpp" bodystart="77" bodyend="87" declfile="/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.h" declline="67" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="HardwareAbstraction_8h_1afa20490546e8c46062402c59db18bf40" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tryDeepSleep</definition>
+        <argsstring>()</argsstring>
+        <name>tryDeepSleep</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Check if hardware is set to stay active. If not, set the watch to wake-up on screen touch and (almost) shut off. </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Clear IRQ unprocessed first</para>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.h" line="72" column="6" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.cpp" bodystart="89" bodyend="134" declfile="/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.h" declline="72" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>HARDWAREABSTRACTION_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HARDWAREABSTRACTION_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="config_8h" kindref="compound">config.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="HardwareAbstraction_8cpp_1a0efcfb9bdf81cceb5d23c3edbee33b38" kindref="member">setupHardware</ref>();</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="HardwareAbstraction_8cpp_1ad818ce1edea73bf8ef4a499a068164f3" kindref="member">setDisplayBrightness</ref>(uint8_t<sp/>b);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="HardwareAbstraction_8cpp_1a67f7625bcb9b4bcc6d60a064b68e6962" kindref="member">turnDisplayOn</ref>();</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="HardwareAbstraction_8cpp_1a21c67f399d0244c428074fe0bdd75c29" kindref="member">turnDisplayOff</ref>();</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="HardwareAbstraction_8cpp_1ab9d025edc2a2108cc9426fcf7b85b0f3" kindref="member">keepActive</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>newValue);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="HardwareAbstraction_8cpp_1ab9d025edc2a2108cc9426fcf7b85b0f3" kindref="member">keepActive</ref>();</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="HardwareAbstraction_8cpp_1a3c3f5c277a7b86fc13d6a93e319fda8a" kindref="member">hourMinute</ref>();</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="HardwareAbstraction_8cpp_1a8e09ea686ea49312846799fb6f51f47b" kindref="member">ymd</ref>();</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal">int8_t<sp/><ref refid="HardwareAbstraction_8cpp_1ab7b5eea102b664f1b0c79df918fa337b" kindref="member">batPercentage</ref>();</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="HardwareAbstraction_8cpp_1a3d333c5a3d38fce478f9b973ab06b294" kindref="member">isr</ref>();</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="HardwareAbstraction_8cpp_1afa20490546e8c46062402c59db18bf40" kindref="member">tryDeepSleep</ref>();</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.h"/>
+  </compounddef>
+</doxygen>

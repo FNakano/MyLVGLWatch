@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_a991eec27578c865874ede3d8ec657c2" kind="dir">
+    <compoundname>/home/fabio/Arduino</compoundname>
+    <innerdir refid="dir_6ffaea0678d06bac0744ce273dc24118">/home/fabio/Arduino/MyLvglWatch-20220910</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/fabio/Arduino/"/>
+  </compounddef>
+</doxygen>

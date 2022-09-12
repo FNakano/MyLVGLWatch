@@ -2,9 +2,9 @@
 
 # -- Project information
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = 'MyLVGLWatch'
+copyright = '2022, FN'
+author = 'FNakano'
 
 release = '0.1'
 version = '0.1.0'

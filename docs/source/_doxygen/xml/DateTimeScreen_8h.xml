@@ -1,0 +1,287 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="DateTimeScreen_8h" kind="file" language="C++">
+    <compoundname>DateTimeScreen.h</compoundname>
+    <includes refid="config_8h" local="yes">config.h</includes>
+    <includedby refid="DateTimeScreen_8cpp" local="yes">/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.cpp</includedby>
+    <includedby refid="MyLvglWatch-20220910_8ino" local="yes">/home/fabio/Arduino/MyLvglWatch-20220910/MyLvglWatch-20220910.ino</includedby>
+    <includedby refid="WSScreen_8cpp" local="yes">/home/fabio/Arduino/MyLvglWatch-20220910/WSScreen.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.h</label>
+        <link refid="DateTimeScreen_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>LilyGoWatch.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.cpp</label>
+        <link refid="DateTimeScreen_8cpp"/>
+      </node>
+      <node id="1">
+        <label>/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.h</label>
+        <link refid="DateTimeScreen_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="DateTimeScreen_8h_1ace285eac2da2c8853a7e8c99fab8e18e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void updateScreenData</definition>
+        <argsstring>()</argsstring>
+        <name>updateScreenData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Update data (text, values) displayed in graphical objects (e.g. time, date, battery level,...) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.h" line="10" column="6" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.cpp" bodystart="29" bodyend="43" declfile="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.h" declline="10" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="DateTimeScreen_8h_1a4731732655268e1bd1d8744b3b6d5c11" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void buildWatchFace</definition>
+        <argsstring>()</argsstring>
+        <name>buildWatchFace</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create this watch face, place graphical objects in it, apply styles. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.h" line="15" column="6" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.cpp" bodystart="174" bodyend="190" declfile="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.h" declline="15" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="DateTimeScreen_8h_1afcee8927440972f20beaf04b3e3f82c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void displayWatchFace</definition>
+        <argsstring>()</argsstring>
+        <name>displayWatchFace</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Display the watch face. I.e. put it on the physical screen. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.h" line="20" column="6" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.cpp" bodystart="192" bodyend="198" declfile="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.h" declline="20" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="DateTimeScreen_8h_1ac52aa4c15c1d296137c9c3d647768643" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void infoEventHandler</definition>
+        <argsstring>(lv_obj_t *obj, lv_event_t event)</argsstring>
+        <name>infoEventHandler</name>
+        <param>
+          <type>lv_obj_t *</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>lv_event_t</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.h" line="24" column="13" declfile="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.h" declline="24" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="DateTimeScreen_8h_1a39f87eb545be39fb2c90bd6ca8fcf876" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void timeEventHandler</definition>
+        <argsstring>(lv_obj_t *obj, lv_event_t event)</argsstring>
+        <name>timeEventHandler</name>
+        <param>
+          <type>lv_obj_t *</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>lv_event_t</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.h" line="25" column="13" declfile="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.h" declline="25" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="DateTimeScreen_8h_1ade2aa85d72f846e6fd69bcac2e7fe755" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void rollerEventHandler</definition>
+        <argsstring>(lv_obj_t *obj, lv_event_t event)</argsstring>
+        <name>rollerEventHandler</name>
+        <param>
+          <type>lv_obj_t *</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>lv_event_t</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.h" line="26" column="13" declfile="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.h" declline="26" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="DateTimeScreen_8h_1a86848961298fe561820d6e0761ea46e5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void leftButtonEventHandler</definition>
+        <argsstring>(lv_obj_t *obj, lv_event_t event)</argsstring>
+        <name>leftButtonEventHandler</name>
+        <param>
+          <type>lv_obj_t *</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>lv_event_t</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.h" line="27" column="13" declfile="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.h" declline="27" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="DateTimeScreen_8h_1a1fd1ae9efa975e23272d415044d18416" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void rightButtonEventHandler</definition>
+        <argsstring>(lv_obj_t *obj, lv_event_t event)</argsstring>
+        <name>rightButtonEventHandler</name>
+        <param>
+          <type>lv_obj_t *</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>lv_event_t</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.h" line="28" column="13" declfile="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.h" declline="28" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="DateTimeScreen_8h_1a6016b76cebd2803de7864fe4d58aa77b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void createRoller</definition>
+        <argsstring>(lv_obj_t *cont)</argsstring>
+        <name>createRoller</name>
+        <param>
+          <type>lv_obj_t *</type>
+          <declname>cont</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.h" line="29" column="13" declfile="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.h" declline="29" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="DateTimeScreen_8h_1adc276f0f7546dc6e4aeadcc1c58fd175" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void createTimeButton</definition>
+        <argsstring>(lv_obj_t *cont)</argsstring>
+        <name>createTimeButton</name>
+        <param>
+          <type>lv_obj_t *</type>
+          <declname>cont</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.h" line="30" column="13" declfile="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.h" declline="30" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="DateTimeScreen_8h_1a4cdf26c48179a18d72aced5e1de2380b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void createInfoBar</definition>
+        <argsstring>(lv_obj_t *cont)</argsstring>
+        <name>createInfoBar</name>
+        <param>
+          <type>lv_obj_t *</type>
+          <declname>cont</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.h" line="31" column="13" declfile="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.h" declline="31" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="DateTimeScreen_8h_1adcf18e56a1ee0ddfb73b0c95a29c0204" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void createSideButtons</definition>
+        <argsstring>(lv_obj_t *cont)</argsstring>
+        <name>createSideButtons</name>
+        <param>
+          <type>lv_obj_t *</type>
+          <declname>cont</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.h" line="32" column="13" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.cpp" bodystart="151" bodyend="172" declfile="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.h" declline="32" declcolumn="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>DATETIMESCREEN_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DATETIMESCREEN_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="config_8h" kindref="compound">config.h</ref>&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>choose<sp/>watch<sp/>version</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="DateTimeScreen_8cpp_1ace285eac2da2c8853a7e8c99fab8e18e" kindref="member">updateScreenData</ref><sp/>();</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="DateTimeScreen_8cpp_1a4731732655268e1bd1d8744b3b6d5c11" kindref="member">buildWatchFace</ref><sp/>();</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="DateTimeScreen_8cpp_1afcee8927440972f20beaf04b3e3f82c1" kindref="member">displayWatchFace</ref>();</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//<sp/>not<sp/>public</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>infoEventHandler(lv_obj_t<sp/>*obj,<sp/>lv_event_t<sp/>event);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>timeEventHandler(lv_obj_t<sp/>*obj,<sp/>lv_event_t<sp/>event);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>rollerEventHandler(lv_obj_t<sp/>*obj,<sp/>lv_event_t<sp/>event);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>leftButtonEventHandler(lv_obj_t<sp/>*obj,<sp/>lv_event_t<sp/>event);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>rightButtonEventHandler(lv_obj_t<sp/>*obj,<sp/>lv_event_t<sp/>event);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>createRoller(lv_obj_t<sp/>*cont);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>createTimeButton<sp/>(lv_obj_t<sp/>*cont);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>createInfoBar<sp/>(lv_obj_t<sp/>*cont);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>createSideButtons<sp/>(lv_obj_t<sp/>*cont);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.h"/>
+  </compounddef>
+</doxygen>

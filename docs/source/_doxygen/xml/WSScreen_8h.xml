@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="WSScreen_8h" kind="file" language="C++">
+    <compoundname>WSScreen.h</compoundname>
+    <includes refid="config_8h" local="yes">config.h</includes>
+    <includedby refid="DateTimeScreen_8cpp" local="yes">/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/fabio/Arduino/MyLvglWatch-20220910/WSScreen.h</label>
+        <link refid="WSScreen_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>LilyGoWatch.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.cpp</label>
+        <link refid="DateTimeScreen_8cpp"/>
+      </node>
+      <node id="1">
+        <label>/home/fabio/Arduino/MyLvglWatch-20220910/WSScreen.h</label>
+        <link refid="WSScreen_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="WSScreen_8h_1a287ba958a4726b8da4bab73e0dd9467d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void buildWatchFace3</definition>
+        <argsstring>()</argsstring>
+        <name>buildWatchFace3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create and display the watch face for file transfer, place graphical objects in it, apply styles. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/WSScreen.h" line="12" column="6" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/WSScreen.cpp" bodystart="159" bodyend="192" declfile="/home/fabio/Arduino/MyLvglWatch-20220910/WSScreen.h" declline="12" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="WSScreen_8h_1aeb1c8f43a92c7594f91bffffeb30678e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void updateScreenData3</definition>
+        <argsstring>()</argsstring>
+        <name>updateScreenData3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Update data (text, values) displayed in graphical objects (e.g. time, battery level, IP address,...) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/WSScreen.h" line="17" column="6" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/WSScreen.cpp" bodystart="31" bodyend="36" declfile="/home/fabio/Arduino/MyLvglWatch-20220910/WSScreen.h" declline="17" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>WSSCREEN_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WSSCREEN_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="config_8h" kindref="compound">config.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>buildWatchFace3();</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>updateScreenData3();</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/>not<sp/>public</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/>static<sp/>void<sp/>event_handler...<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/fabio/Arduino/MyLvglWatch-20220910/WSScreen.h"/>
+  </compounddef>
+</doxygen>

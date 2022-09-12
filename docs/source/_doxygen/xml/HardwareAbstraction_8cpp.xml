@@ -1,0 +1,401 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="HardwareAbstraction_8cpp" kind="file" language="C++">
+    <compoundname>HardwareAbstraction.cpp</compoundname>
+    <includes refid="HardwareAbstraction_8h" local="yes">HardwareAbstraction.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.cpp</label>
+        <link refid="HardwareAbstraction_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>HardwareAbstraction.h</label>
+        <link refid="HardwareAbstraction_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>LilyGoWatch.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="HardwareAbstraction_8cpp_1ad224ae2a297218d79a693efa26a8b64c" prot="public" static="yes" mutable="no">
+        <type>TTGOClass *</type>
+        <definition>TTGOClass* ttgo</definition>
+        <argsstring></argsstring>
+        <name>ttgo</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.cpp" line="12" column="18" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.cpp" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="HardwareAbstraction_8cpp_1a3f96f316138972b7cb488893a0bc15c8" prot="public" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool irq</definition>
+        <argsstring></argsstring>
+        <name>irq</name>
+        <initializer>=false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.cpp" line="15" column="13" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.cpp" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="HardwareAbstraction_8cpp_1a3dc69304390e9458ec9d4bb51a305ba6" prot="public" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool fKeepActive</definition>
+        <argsstring></argsstring>
+        <name>fKeepActive</name>
+        <initializer>=false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.cpp" line="16" column="13" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.cpp" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="HardwareAbstraction_8cpp_1a0efcfb9bdf81cceb5d23c3edbee33b38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setupHardware</definition>
+        <argsstring>()</argsstring>
+        <name>setupHardware</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialize hardware for use. Call it in setup() function. </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Clear IRQ unprocessed first</para>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.cpp" line="18" column="6" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.cpp" bodystart="18" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="HardwareAbstraction_8cpp_1ad818ce1edea73bf8ef4a499a068164f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setDisplayBrightness</definition>
+        <argsstring>(uint8_t b)</argsstring>
+        <name>setDisplayBrightness</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set display brightness. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>brightness value from 0 to 255. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.cpp" line="43" column="6" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.cpp" bodystart="43" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="HardwareAbstraction_8cpp_1ab9d025edc2a2108cc9426fcf7b85b0f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void keepActive</definition>
+        <argsstring>(bool newValue)</argsstring>
+        <name>keepActive</name>
+        <param>
+          <type>bool</type>
+          <declname>newValue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the hardware to stay active (avoid entering deepsleep) or no (may enter deepsleep). Deepsleep is a low-power mode: hardware is almost shut-off. It can be woken-up by touching the screen. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>newValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true: stay active; false: may enter deepsleep; </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.cpp" line="47" column="6" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.cpp" bodystart="47" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="HardwareAbstraction_8cpp_1abcda83bea7c0793e4aca650e1154bb4a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool keepActive</definition>
+        <argsstring>()</argsstring>
+        <name>keepActive</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Query if the hardware is set to stay active (avoid entering deepsleep) or no (may enter deepsleep). Deepsleep is a low-power mode: hardware is almost shut-off. It can be woken-up by touching the screen. <simplesect kind="return"><para>true: stay active; false: may enter deepsleep; </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.cpp" line="51" column="6" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.cpp" bodystart="51" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="HardwareAbstraction_8cpp_1a67f7625bcb9b4bcc6d60a064b68e6962" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void turnDisplayOn</definition>
+        <argsstring>()</argsstring>
+        <name>turnDisplayOn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Turn display on </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.cpp" line="56" column="6" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.cpp" bodystart="56" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="HardwareAbstraction_8cpp_1a3c3f5c277a7b86fc13d6a93e319fda8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* hourMinute</definition>
+        <argsstring>()</argsstring>
+        <name>hourMinute</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get current time. It is expected that new functions (eg. that return different formats) would be written in this file. <simplesect kind="return"><para>hour and minute as a string HH:MM </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.cpp" line="60" column="12" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.cpp" bodystart="60" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="HardwareAbstraction_8cpp_1a8e09ea686ea49312846799fb6f51f47b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* ymd</definition>
+        <argsstring>()</argsstring>
+        <name>ymd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get current date. It is expected that new functions (eg. that return different formats) would be written in this file. <simplesect kind="return"><para>year monty day in the month as a string YYYY-MM-DD </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.cpp" line="65" column="12" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.cpp" bodystart="65" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="HardwareAbstraction_8cpp_1ab7b5eea102b664f1b0c79df918fa337b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int8_t</type>
+        <definition>int8_t batPercentage</definition>
+        <argsstring>()</argsstring>
+        <name>batPercentage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get battery charge in percent. <simplesect kind="return"><para>number 0-100 percent </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.cpp" line="69" column="8" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.cpp" bodystart="69" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="HardwareAbstraction_8cpp_1a21c67f399d0244c428074fe0bdd75c29" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void turnDisplayOff</definition>
+        <argsstring>()</argsstring>
+        <name>turnDisplayOff</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Turn display off </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.cpp" line="73" column="6" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.cpp" bodystart="73" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="HardwareAbstraction_8cpp_1a3d333c5a3d38fce478f9b973ab06b294" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void isr</definition>
+        <argsstring>()</argsstring>
+        <name>isr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function executed when a hardware event occurs (ex. hardware button, touch screen, accelerometer, ...) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.cpp" line="77" column="6" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.cpp" bodystart="77" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="HardwareAbstraction_8cpp_1afa20490546e8c46062402c59db18bf40" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tryDeepSleep</definition>
+        <argsstring>()</argsstring>
+        <name>tryDeepSleep</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Check if hardware is set to stay active. If not, set the watch to wake-up on screen touch and (almost) shut off. </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Clear IRQ unprocessed first</para>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.cpp" line="89" column="6" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.cpp" bodystart="89" bodyend="134"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>user: Functions to access hardware features (other than wifi).</para>
+<para>developer: software layer to abstract out hardware details and give the user a clean interface to hardware features. This file can get too big if too many hardware features are accessed. In this case, it can be split to cover groups of features. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="8"><highlight class="preprocessor">#include<sp/>&quot;HardwareAbstraction.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Deep<sp/>sleep<sp/>and<sp/>wakeup<sp/>functions.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>WiFi<sp/>power<sp/>management<sp/>is<sp/>in<sp/>NetworkNoScreen.ino<sp/>file.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>TTGOClass<sp/>*ttgo<sp/>=<sp/>NULL;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>pointer<sp/>to<sp/>watch<sp/>internals</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>flags<sp/>to<sp/>manage<sp/>sleep<sp/>and<sp/>wake<sp/>up.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>irq=</highlight><highlight class="keyword">false</highlight><highlight class="normal">;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>indicates<sp/>that<sp/>a<sp/>hardware<sp/>button<sp/>interrupt<sp/>occured</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>fKeepActive=</highlight><highlight class="keyword">false</highlight><highlight class="normal">;<sp/><sp/></highlight><highlight class="comment">//<sp/>indicates<sp/>that<sp/>some<sp/>process<sp/>is<sp/>running<sp/>so<sp/>that<sp/>the<sp/>watch<sp/>cannot<sp/>deepSleep.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="HardwareAbstraction_8cpp_1a0efcfb9bdf81cceb5d23c3edbee33b38" kindref="member">setupHardware</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>ttgo<sp/>=<sp/>TTGOClass::getWatch();<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>pointer<sp/>to<sp/>watch<sp/>internals</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>backend<sp/>setup</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.begin(115200);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>ttgo<sp/>=<sp/>TTGOClass::getWatch();</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>ttgo-&gt;begin();</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>PEK<sp/>KEY<sp/>hardware<sp/>button<sp/>interrupt<sp/>handling<sp/>to<sp/>set<sp/>date<sp/>and<sp/>time.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>pinMode(AXP202_INT,<sp/>INPUT_PULLUP);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>attachInterrupt(AXP202_INT,<sp/>[]<sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>irq<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>},<sp/>FALLING);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>ttgo-&gt;power-&gt;enableIRQ(AXP202_PEK_SHORTPRESS_IRQ,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>ttgo-&gt;power-&gt;clearIRQ();</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>start<sp/>screen<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>ttgo-&gt;lvgl_begin();</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="39"><highlight class="comment"><sp/>*<sp/><sp/><sp/>setCpuFrequencyMhz(240);<sp/>//<sp/>maximum<sp/>speed</highlight></codeline>
+<codeline lineno="40"><highlight class="comment"><sp/>*<sp/><sp/><sp/>Above<sp/>mentioned<sp/>function<sp/>is<sp/>already<sp/>defined<sp/>elsewhere</highlight></codeline>
+<codeline lineno="41"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="HardwareAbstraction_8cpp_1ad818ce1edea73bf8ef4a499a068164f3" kindref="member">setDisplayBrightness</ref>(uint8_t<sp/>b)<sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>ttgo-&gt;bl-&gt;adjust(b);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="HardwareAbstraction_8cpp_1ab9d025edc2a2108cc9426fcf7b85b0f3" kindref="member">keepActive</ref><sp/>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>newValue)<sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>fKeepActive=newValue;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="HardwareAbstraction_8cpp_1ab9d025edc2a2108cc9426fcf7b85b0f3" kindref="member">keepActive</ref><sp/>()<sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Function<sp/>(name)<sp/>overload<sp/>-<sp/>C++<sp/>feature</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>fKeepActive;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="HardwareAbstraction_8cpp_1a67f7625bcb9b4bcc6d60a064b68e6962" kindref="member">turnDisplayOn</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/>ttgo-&gt;openBL();</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="HardwareAbstraction_8cpp_1a3c3f5c277a7b86fc13d6a93e319fda8a" kindref="member">hourMinute</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*For<sp/>immediate<sp/>use<sp/>-<sp/>no<sp/>buffering.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ttgo-&gt;rtc-&gt;formatDateTime(PCF_TIMEFORMAT_HM);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="HardwareAbstraction_8cpp_1a8e09ea686ea49312846799fb6f51f47b" kindref="member">ymd</ref>(){</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ttgo-&gt;rtc-&gt;formatDateTime(PCF_TIMEFORMAT_YYYY_MM_DD);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal">int8_t<sp/><ref refid="HardwareAbstraction_8cpp_1ab7b5eea102b664f1b0c79df918fa337b" kindref="member">batPercentage</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ttgo-&gt;power-&gt;getBattPercentage();</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="HardwareAbstraction_8cpp_1a21c67f399d0244c428074fe0bdd75c29" kindref="member">turnDisplayOff</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/>ttgo-&gt;closeBL();</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="HardwareAbstraction_8cpp_1a3d333c5a3d38fce478f9b973ab06b294" kindref="member">isr</ref><sp/>()<sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(irq)<sp/>{<sp/></highlight><highlight class="comment">//<sp/>hardware<sp/>button<sp/>interrupt<sp/>response</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>irq=</highlight><highlight class="keyword">false</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//<sp/>clear<sp/>flag</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ttgo-&gt;power-&gt;readIRQ();<sp/><sp/></highlight><highlight class="comment">//<sp/>get<sp/>the<sp/>IRQ<sp/>source</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ttgo-&gt;power-&gt;isPEKShortPressIRQ())<sp/>{<sp/></highlight><highlight class="comment">//<sp/>hardware<sp/>button<sp/>short<sp/>press</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Clean<sp/>power<sp/>chip<sp/>irq<sp/>status</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ttgo-&gt;power-&gt;clearIRQ();</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="HardwareAbstraction_8cpp_1afa20490546e8c46062402c59db18bf40" kindref="member">tryDeepSleep</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fKeepActive)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="92"><highlight class="comment"><sp/><sp/><sp/>*<sp/>Set<sp/>wakeup<sp/>through<sp/>touchscreen<sp/>and<sp/>go<sp/>deep<sp/>sleep.</highlight></codeline>
+<codeline lineno="93"><highlight class="comment"><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="95"><highlight class="comment"><sp/><sp/><sp/>*<sp/>Turn<sp/>screen<sp/>and<sp/>other<sp/>hardware<sp/>off<sp/>(except<sp/>ESP32),<sp/></highlight></codeline>
+<codeline lineno="96"><highlight class="comment"><sp/><sp/><sp/>*<sp/>set<sp/>touchscreen<sp/>as<sp/>the<sp/>only<sp/>wakeup<sp/>source,</highlight></codeline>
+<codeline lineno="97"><highlight class="comment"><sp/><sp/><sp/>*<sp/>set<sp/>ESP32<sp/>to<sp/>deep<sp/>sleep.</highlight></codeline>
+<codeline lineno="98"><highlight class="comment"><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/><sp/>touchscreen<sp/>sleep</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>ttgo-&gt;displaySleep();</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="103"><highlight class="comment"><sp/><sp/><sp/><sp/>In<sp/>TWatch2019/<sp/>Twatch2020V1,<sp/>touch<sp/>reset<sp/>is<sp/>not<sp/>connected<sp/>to<sp/>ESP32,</highlight></codeline>
+<codeline lineno="104"><highlight class="comment"><sp/><sp/><sp/><sp/>so<sp/>it<sp/>cannot<sp/>be<sp/>used.<sp/>Set<sp/>the<sp/>touch<sp/>to<sp/>sleep,</highlight></codeline>
+<codeline lineno="105"><highlight class="comment"><sp/><sp/><sp/><sp/>otherwise<sp/>it<sp/>will<sp/>not<sp/>be<sp/>able<sp/>to<sp/>wake<sp/>up.</highlight></codeline>
+<codeline lineno="106"><highlight class="comment"><sp/><sp/><sp/><sp/>Only<sp/>by<sp/>turning<sp/>off<sp/>the<sp/>power<sp/>and<sp/>powering<sp/>on<sp/>the<sp/>touch<sp/>again<sp/>will<sp/>the<sp/>touch<sp/>be<sp/>working<sp/>mode</highlight></codeline>
+<codeline lineno="107"><highlight class="comment"><sp/><sp/><sp/><sp/>//<sp/>ttgo-&gt;displayOff();</highlight></codeline>
+<codeline lineno="108"><highlight class="comment"><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>ttgo-&gt;powerOff();<sp/><sp/></highlight><highlight class="comment">//<sp/>contains<sp/>the<sp/>same<sp/>code<sp/>below<sp/>(??)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Set<sp/>all<sp/>channel<sp/>power<sp/>off<sp/>(turn<sp/>sensors<sp/>and<sp/>devices<sp/>other<sp/>than<sp/>ESP32<sp/>off)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>ttgo-&gt;power-&gt;setPowerOutPut(AXP202_LDO3,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>ttgo-&gt;power-&gt;setPowerOutPut(AXP202_LDO4,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>ttgo-&gt;power-&gt;setPowerOutPut(AXP202_LDO2,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>ttgo-&gt;power-&gt;setPowerOutPut(AXP202_EXTEN,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>ttgo-&gt;power-&gt;setPowerOutPut(AXP202_DCDC2,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TOUCH<sp/>SCREEN<sp/><sp/>Wakeup<sp/>source</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>esp_sleep_enable_ext1_wakeup(GPIO_SEL_38,<sp/>ESP_EXT1_WAKEUP_ALL_LOW);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>PEK<sp/>KEY<sp/>hardware<sp/>button<sp/>interrupt<sp/>handling</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>esp_sleep_enable_ext1_wakeup(GPIO_SEL_35,<sp/>ESP_EXT1_WAKEUP_ALL_LOW);<sp/><sp/>//<sp/>uncomment<sp/>to<sp/>wake<sp/>watch<sp/>up<sp/>from<sp/>hardware<sp/>button<sp/>press</highlight></codeline>
+<codeline lineno="124"><highlight class="comment"><sp/><sp/><sp/><sp/>pinMode(AXP202_INT,<sp/>INPUT_PULLUP);</highlight></codeline>
+<codeline lineno="125"><highlight class="comment"><sp/><sp/><sp/><sp/>attachInterrupt(AXP202_INT,<sp/>[]<sp/>{</highlight></codeline>
+<codeline lineno="126"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>irq<sp/>=<sp/>true;</highlight></codeline>
+<codeline lineno="127"><highlight class="comment"><sp/><sp/><sp/><sp/>},<sp/>FALLING);</highlight></codeline>
+<codeline lineno="128"><highlight class="comment"><sp/><sp/><sp/><sp/>ttgo-&gt;power-&gt;enableIRQ(AXP202_PEK_SHORTPRESS_IRQ,<sp/>true);<sp/>*/</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>ttgo-&gt;power-&gt;clearIRQ();</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>enable<sp/>touch<sp/>interrupt<sp/>(maybe<sp/>wake<sp/>up<sp/>ESP32<sp/>is<sp/>the<sp/>only<sp/>possible<sp/>action)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>pinMode(TOUCH_INT,<sp/>INPUT);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>esp_deep_sleep_start();<sp/><sp/></highlight><highlight class="comment">//<sp/>Put<sp/>ESP32<sp/>to<sp/>deep<sp/>sleep</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/fabio/Arduino/MyLvglWatch-20220910/HardwareAbstraction.cpp"/>
+  </compounddef>
+</doxygen>

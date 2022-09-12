@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="MyLvglWatch-20220905-C_8ino" kind="file" language="C++">
+    <compoundname>MyLvglWatch-20220905-C.ino</compoundname>
+    <includes refid="config_8h" local="yes">config.h</includes>
+    <includes refid="DateTimeScreen_8h" local="yes">DateTimeScreen.h</includes>
+    <includes refid="HardwareAbstraction_8h" local="yes">HardwareAbstraction.h</includes>
+    <includes refid="Styles_8h" local="yes">Styles.h</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>config.h</label>
+        <link refid="config_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>DateTimeScreen.h</label>
+        <link refid="DateTimeScreen_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/fabio/Arduino/MyLvglWatch-20220905-C/MyLvglWatch-20220905-C.ino</label>
+        <link refid="MyLvglWatch-20220905-C_8ino"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>Styles.h</label>
+        <link refid="Styles_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>LilyGoWatch.h</label>
+      </node>
+      <node id="5">
+        <label>HardwareAbstraction.h</label>
+        <link refid="HardwareAbstraction_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="MyLvglWatch-20220905-C_8ino_1a4fc01d736fe50cf5b977f755b675f11d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setup</definition>
+        <argsstring>()</argsstring>
+        <name>setup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220905-C/MyLvglWatch-20220905-C.ino" line="10" column="6" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220905-C/MyLvglWatch-20220905-C.ino" bodystart="10" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="MyLvglWatch-20220905-C_8ino_1afe461d27b9c48d5921c00d521181f12f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void loop</definition>
+        <argsstring>()</argsstring>
+        <name>loop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220905-C/MyLvglWatch-20220905-C.ino" line="20" column="6" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220905-C/MyLvglWatch-20220905-C.ino" bodystart="20" bodyend="29"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>Based<sp/>on<sp/>MyLvglWatch-20220829.ino.</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;config.h&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>choose<sp/>watch<sp/>version</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;DateTimeScreen.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;HardwareAbstraction.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Styles.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setup()</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>setupHardware();</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>setupStyles();</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>buildWatchFace();</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>updateScreenData();</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>displayWatchFace();</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>turnDisplayOn();</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>loop()</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>Hardware<sp/>interrupts<sp/>and<sp/>deepsleep<sp/>are<sp/>treated<sp/>here.<sp/>LVGL<sp/>interrupts<sp/>(events)<sp/>are<sp/>treated<sp/>in</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/><sp/><sp/>*<sp/>LGVL<sp/>way<sp/>(event<sp/>callback/register/loop)<sp/><sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>tInactive=<sp/>lv_disp_get_inactive_time(NULL);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(tInactive&gt;10000)<sp/>tryDeepSleep();<sp/></highlight><highlight class="comment">//<sp/>outside<sp/>lv_event_handler<sp/>to<sp/>not<sp/>interrupt<sp/>UI<sp/>operation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>isr();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_task_handler();</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/fabio/Arduino/MyLvglWatch-20220905-C/MyLvglWatch-20220905-C.ino"/>
+  </compounddef>
+</doxygen>

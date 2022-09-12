@@ -1,11 +1,12 @@
 A LVGL + TTGO T-Watch test with documentation
 =============================================
 
-1. Started by cloning RTD template: https://docs.readthedocs.io/en/stable/tutorial/ into github repository;
-2. Clone github repository to local directory;
-2. In the local copy: adapt ``conf.py`` (changed project name, author, ...);
-3. In the local copy: Remove ``lumache.py``;
-4. In the local copy: create folder ``src``, containing test source code;
-5. In the local copy: copy documentation (generated using ``exhale``, ``breathe``, ``doxygen`` and ``sphinx``) into ``docs/source``;
-6. Add, commit, push;
-7. Deploy to RTD;
+#. Started by cloning RTD template: https://docs.readthedocs.io/en/stable/tutorial/ into github repository;
+#. Clone github repository to local directory;
+#. In the local copy: adapt ``conf.py`` (changed project name, author, ...);
+#. In the local copy: Remove ``lumache.py``;
+#. In the local copy: create folder ``src``, containing test source code;
+#. In the local copy: copy documentation (generated using ``exhale``, ``breathe``, ``doxygen`` and ``sphinx``) into ``docs/source``;
+   - replaced ``index.rst`` and created/copied folder ``api``;
+#. Add, commit, push;
+#. Deploy to RTD;

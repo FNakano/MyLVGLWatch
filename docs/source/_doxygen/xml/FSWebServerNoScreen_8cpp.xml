@@ -1,0 +1,701 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="FSWebServerNoScreen_8cpp" kind="file" language="C++">
+    <compoundname>FSWebServerNoScreen.cpp</compoundname>
+    <includes local="no">WiFi.h</includes>
+    <includes local="no">WiFiClient.h</includes>
+    <includes local="no">WebServer.h</includes>
+    <includes local="no">ESPmDNS.h</includes>
+    <includes local="no">FFat.h</includes>
+    <includes local="no">SPIFFS.h</includes>
+    <includes refid="config_8h" local="yes">config.h</includes>
+    <includes refid="NetworkNoScreen_8h" local="yes">NetworkNoScreen.h</includes>
+    <incdepgraph>
+      <node id="4">
+        <label>WebServer.h</label>
+      </node>
+      <node id="6">
+        <label>FFat.h</label>
+      </node>
+      <node id="12">
+        <label>driver/adc.h</label>
+      </node>
+      <node id="5">
+        <label>ESPmDNS.h</label>
+      </node>
+      <node id="1">
+        <label>/home/fabio/Arduino/MyLvglWatch-20220910/FSWebServerNoScreen.cpp</label>
+        <link refid="FSWebServerNoScreen_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>time.h</label>
+      </node>
+      <node id="10">
+        <label>NetworkNoScreen.h</label>
+        <link refid="NetworkNoScreen_8h_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>SPIFFS.h</label>
+      </node>
+      <node id="8">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>LilyGoWatch.h</label>
+      </node>
+      <node id="3">
+        <label>WiFiClient.h</label>
+      </node>
+      <node id="2">
+        <label>WiFi.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="FSWebServerNoScreen_8cpp_1aa426160a737ec3fec0e82834c37a59c8" prot="public" static="no">
+        <name>FILESYSTEM</name>
+        <initializer>SPIFFS</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/FSWebServerNoScreen.cpp" line="38" column="9" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/FSWebServerNoScreen.cpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="FSWebServerNoScreen_8cpp_1add35ecfc59bf9641224ba2ca471f2e4f" prot="public" static="no">
+        <name>FORMAT_FILESYSTEM</name>
+        <initializer>false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/FSWebServerNoScreen.cpp" line="40" column="9" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/FSWebServerNoScreen.cpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="FSWebServerNoScreen_8cpp_1a8329fe5b96ea951b0d6342dab3c944fd" prot="public" static="no">
+        <name>DBG_OUTPUT_PORT</name>
+        <initializer>Serial</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/FSWebServerNoScreen.cpp" line="41" column="9" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/FSWebServerNoScreen.cpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="FSWebServerNoScreen_8cpp_1ae032e164f1daa754d6fbb79d59723931" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* host</definition>
+        <argsstring></argsstring>
+        <name>host</name>
+        <initializer>= &quot;esp32fs&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/FSWebServerNoScreen.cpp" line="57" column="12" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/FSWebServerNoScreen.cpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="FSWebServerNoScreen_8cpp_1a85a1845cd6671bcef69845032851013b" prot="public" static="no" mutable="no">
+        <type>File</type>
+        <definition>File fsUploadFile</definition>
+        <argsstring></argsstring>
+        <name>fsUploadFile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/FSWebServerNoScreen.cpp" line="60" column="6" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/FSWebServerNoScreen.cpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="FSWebServerNoScreen_8cpp_1a80a021ae6f2cb4467a17a0a4e2340fad" prot="public" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool webServerFSStarted</definition>
+        <argsstring></argsstring>
+        <name>webServerFSStarted</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/FSWebServerNoScreen.cpp" line="62" column="13" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/FSWebServerNoScreen.cpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="FSWebServerNoScreen_8cpp_1a48f3f185be3ea2d153c347a157b38d42" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>WebServer</type>
+        <definition>WebServer server</definition>
+        <argsstring>(80)</argsstring>
+        <name>server</name>
+        <param>
+          <type>80</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/FSWebServerNoScreen.cpp" line="58" column="11" declfile="/home/fabio/Arduino/MyLvglWatch-20220910/FSWebServerNoScreen.cpp" declline="58" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="FSWebServerNoScreen_8cpp_1a761e6c07b34138806660f0a941b280f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>String</type>
+        <definition>String formatBytes</definition>
+        <argsstring>(size_t bytes)</argsstring>
+        <name>formatBytes</name>
+        <param>
+          <type>size_t</type>
+          <declname>bytes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/FSWebServerNoScreen.cpp" line="65" column="8" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/FSWebServerNoScreen.cpp" bodystart="65" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="FSWebServerNoScreen_8cpp_1ac1311527864d9a4219f50d677608e538" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>String</type>
+        <definition>String getContentType</definition>
+        <argsstring>(String filename)</argsstring>
+        <name>getContentType</name>
+        <param>
+          <type>String</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/FSWebServerNoScreen.cpp" line="77" column="8" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/FSWebServerNoScreen.cpp" bodystart="77" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="FSWebServerNoScreen_8cpp_1a135df671bbc70b5f464cb5a0a18bf16d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool exists</definition>
+        <argsstring>(String path)</argsstring>
+        <name>exists</name>
+        <param>
+          <type>String</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/FSWebServerNoScreen.cpp" line="108" column="6" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/FSWebServerNoScreen.cpp" bodystart="108" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="FSWebServerNoScreen_8cpp_1a0548bb0730eb6fb24d9d764ec31337c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool handleFileRead</definition>
+        <argsstring>(String path)</argsstring>
+        <name>handleFileRead</name>
+        <param>
+          <type>String</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/FSWebServerNoScreen.cpp" line="118" column="6" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/FSWebServerNoScreen.cpp" bodystart="118" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="FSWebServerNoScreen_8cpp_1a3ad222f20f56d154a7728c39310e6873" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void handleFileUpload</definition>
+        <argsstring>()</argsstring>
+        <name>handleFileUpload</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/FSWebServerNoScreen.cpp" line="137" column="6" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/FSWebServerNoScreen.cpp" bodystart="137" bodyend="169"/>
+      </memberdef>
+      <memberdef kind="function" id="FSWebServerNoScreen_8cpp_1a1266b17297c36cb097123920f0a089a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void handleFileDelete</definition>
+        <argsstring>()</argsstring>
+        <name>handleFileDelete</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/FSWebServerNoScreen.cpp" line="171" column="6" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/FSWebServerNoScreen.cpp" bodystart="171" bodyend="186"/>
+      </memberdef>
+      <memberdef kind="function" id="FSWebServerNoScreen_8cpp_1a8c77f65f0ebc6f33815c1b24e5698cf7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void handleFileCreate</definition>
+        <argsstring>()</argsstring>
+        <name>handleFileCreate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/FSWebServerNoScreen.cpp" line="188" column="6" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/FSWebServerNoScreen.cpp" bodystart="188" bodyend="208"/>
+      </memberdef>
+      <memberdef kind="function" id="FSWebServerNoScreen_8cpp_1a5a374ae4e01508d13e7256d117695c49" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void handleFileList</definition>
+        <argsstring>()</argsstring>
+        <name>handleFileList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/FSWebServerNoScreen.cpp" line="210" column="6" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/FSWebServerNoScreen.cpp" bodystart="210" bodyend="240"/>
+      </memberdef>
+      <memberdef kind="function" id="FSWebServerNoScreen_8cpp_1a8afd16649ea8d46256f9bf48ac0b379c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int recordEvent</definition>
+        <argsstring>(const char *desc)</argsstring>
+        <name>recordEvent</name>
+        <param>
+          <type>const char *</type>
+          <declname>desc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/FSWebServerNoScreen.cpp" line="242" column="5" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/FSWebServerNoScreen.cpp" bodystart="242" bodyend="271"/>
+      </memberdef>
+      <memberdef kind="function" id="FSWebServerNoScreen_8cpp_1a0eb8be4b5aad5940f26990d4d28f1eca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void startWebServerFS</definition>
+        <argsstring>(void)</argsstring>
+        <name>startWebServerFS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Turns file browsing/transfer on. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/FSWebServerNoScreen.cpp" line="273" column="6" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/FSWebServerNoScreen.cpp" bodystart="273" bodyend="344"/>
+      </memberdef>
+      <memberdef kind="function" id="FSWebServerNoScreen_8cpp_1ab85d2b44d50825cf75349dcf7681bf70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void closeWebServerandSPIFFSandWiFi</definition>
+        <argsstring>()</argsstring>
+        <name>closeWebServerandSPIFFSandWiFi</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Turns file browsint/transfer off. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/FSWebServerNoScreen.cpp" line="346" column="6" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/FSWebServerNoScreen.cpp" bodystart="346" bodyend="351"/>
+      </memberdef>
+      <memberdef kind="function" id="FSWebServerNoScreen_8cpp_1acd30b7f65cbd3d6ab18b624c0c102ee5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool webServerFSTestAndHandle</definition>
+        <argsstring>(void)</argsstring>
+        <name>webServerFSTestAndHandle</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Check if someone (usually through a web browser) requested some page and responds to it. Example on how to use this function is in FSScreen.cpp</para>
+<para>Note for developers: this function should be added to LVGL event/task loop. <simplesect kind="return"><para>true if the web server is on (can be used to avoid going to deep sleep). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/FSWebServerNoScreen.cpp" line="353" column="6" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/FSWebServerNoScreen.cpp" bodystart="353" bodyend="357"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>It is useful to upload/browse/download/ files to the watch. This is achieved using a web server. This code is based on Arduino IDE, ESP32, FSWebServer. Functions were added to interface FSWebServer to other modules in the watch. Minor changes over Arduino IDE, ESP32, FSWebServer. Original copyright message preserved below.</para>
+<para>FSWebServer - Example WebServer with FS backend for esp8266/esp32 Copyright (c) 2015 Hristo Gochkov. All rights reserved. This file is part of the WebServer library for Arduino environment.</para>
+<para>This library is free software; you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License as published by the Free Software Foundation; either version 2.1 of the License, or (at your option) any later version. This library is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more details. You should have received a copy of the GNU Lesser General Public License along with this library; if not, write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA</para>
+<para>upload the contents of the data folder with MkSPIFFS Tool (&quot;ESP32 Sketch Data Upload&quot; in Tools menu in Arduino IDE) or you can upload the contents of a folder if you CD in that folder and run the following command: for file in <computeroutput>ls -A1</computeroutput>; do curl -F &quot;file=@$PWD/$file&quot; esp32fs.local/edit; done</para>
+<para>access the sample web page at <ulink url="http://esp32fs.local">http://esp32fs.local</ulink> edit the page by going to <ulink url="http://esp32fs.local/edit">http://esp32fs.local/edit</ulink></para>
+<para>Falta criar o header e arrumar as chamadas na tela. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="33"><highlight class="preprocessor">#include<sp/>&lt;WiFi.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;WiFiClient.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;WebServer.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ESPmDNS.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FILESYSTEM<sp/>SPIFFS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">//<sp/>You<sp/>only<sp/>need<sp/>to<sp/>format<sp/>the<sp/>filesystem<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FORMAT_FILESYSTEM<sp/>false</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DBG_OUTPUT_PORT<sp/>Serial</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>FILESYSTEM<sp/>==<sp/>FFat</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;FFat.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>FILESYSTEM<sp/>==<sp/>SPIFFS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;SPIFFS.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="config_8h" kindref="compound">config.h</ref>&quot;</highlight><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>need<sp/>this<sp/>to<sp/>get<sp/>watch<sp/>and<sp/>RTC<sp/>handlers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;NetworkNoScreen.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="54"><highlight class="comment">const<sp/>char*<sp/>ssid<sp/>=<sp/>&quot;NameOfNetworkTP&quot;;</highlight></codeline>
+<codeline lineno="55"><highlight class="comment">const<sp/>char*<sp/>password<sp/>=<sp/>&quot;0123456789&quot;;</highlight></codeline>
+<codeline lineno="56"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>host<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;esp32fs&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">WebServer<sp/>server(80);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="comment">//holds<sp/>the<sp/>current<sp/>upload</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal">File<sp/>fsUploadFile;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>webServerFSStarted<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="comment">//format<sp/>bytes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal">String<sp/>formatBytes(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>bytes)<sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(bytes<sp/>&lt;<sp/>1024)<sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>String(bytes)<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;B&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(bytes<sp/>&lt;<sp/>(1024<sp/>*<sp/>1024))<sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>String(bytes<sp/>/<sp/>1024.0)<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;KB&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(bytes<sp/>&lt;<sp/>(1024<sp/>*<sp/>1024<sp/>*<sp/>1024))<sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>String(bytes<sp/>/<sp/>1024.0<sp/>/<sp/>1024.0)<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;MB&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>String(bytes<sp/>/<sp/>1024.0<sp/>/<sp/>1024.0<sp/>/<sp/>1024.0)<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;GB&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal">String<sp/>getContentType(String<sp/>filename)<sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(server.hasArg(</highlight><highlight class="stringliteral">&quot;download&quot;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;application/octet-stream&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(filename.endsWith(</highlight><highlight class="stringliteral">&quot;.htm&quot;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;text/html&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(filename.endsWith(</highlight><highlight class="stringliteral">&quot;.html&quot;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;text/html&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(filename.endsWith(</highlight><highlight class="stringliteral">&quot;.css&quot;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;text/css&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(filename.endsWith(</highlight><highlight class="stringliteral">&quot;.js&quot;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;application/javascript&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(filename.endsWith(</highlight><highlight class="stringliteral">&quot;.png&quot;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;image/png&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(filename.endsWith(</highlight><highlight class="stringliteral">&quot;.gif&quot;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;image/gif&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(filename.endsWith(</highlight><highlight class="stringliteral">&quot;.jpg&quot;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;image/jpeg&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(filename.endsWith(</highlight><highlight class="stringliteral">&quot;.ico&quot;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;image/x-icon&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(filename.endsWith(</highlight><highlight class="stringliteral">&quot;.xml&quot;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;text/xml&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(filename.endsWith(</highlight><highlight class="stringliteral">&quot;.pdf&quot;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;application/x-pdf&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(filename.endsWith(</highlight><highlight class="stringliteral">&quot;.zip&quot;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;application/x-zip&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(filename.endsWith(</highlight><highlight class="stringliteral">&quot;.gz&quot;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;application/x-gzip&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;text/plain&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>exists(String<sp/>path){</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>yes<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/>File<sp/>file<sp/>=<sp/>FILESYSTEM.open(path,<sp/></highlight><highlight class="stringliteral">&quot;r&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!file.isDirectory()){</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>yes<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/>file.close();</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>yes;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>handleFileRead(String<sp/>path)<sp/>{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/>DBG_OUTPUT_PORT.println(</highlight><highlight class="stringliteral">&quot;handleFileRead:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>path);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(path.endsWith(</highlight><highlight class="stringliteral">&quot;/&quot;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>path<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;index.htm&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/>String<sp/>contentType<sp/>=<sp/>getContentType(path);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/>String<sp/>pathWithGz<sp/>=<sp/>path<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;.gz&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(exists(pathWithGz)<sp/>||<sp/>exists(path))<sp/>{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(exists(pathWithGz))<sp/>{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>path<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;.gz&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>File<sp/>file<sp/>=<sp/>FILESYSTEM.open(path,<sp/></highlight><highlight class="stringliteral">&quot;r&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>server.streamFile(file,<sp/>contentType);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>file.close();</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>handleFileUpload()<sp/>{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(server.uri()<sp/>!=<sp/></highlight><highlight class="stringliteral">&quot;/edit&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/>HTTPUpload&amp;<sp/>upload<sp/>=<sp/>server.upload();</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(upload.status)<sp/>{</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>UPLOAD_FILE_START:<sp/>DBG_OUTPUT_PORT.print<sp/>(</highlight><highlight class="stringliteral">&quot;START<sp/>&quot;</highlight><highlight class="normal">);<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>UPLOAD_FILE_WRITE:<sp/>DBG_OUTPUT_PORT.print<sp/>(</highlight><highlight class="stringliteral">&quot;WRITE<sp/>&quot;</highlight><highlight class="normal">);<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>UPLOAD_FILE_END:<sp/>DBG_OUTPUT_PORT.print<sp/>(</highlight><highlight class="stringliteral">&quot;END<sp/>&quot;</highlight><highlight class="normal">);<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:<sp/><sp/>DBG_OUTPUT_PORT.print<sp/>(upload.status);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/>DBG_OUTPUT_PORT.print<sp/>(</highlight><highlight class="stringliteral">&quot;<sp/>filename:<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/>DBG_OUTPUT_PORT.println<sp/>(upload.filename);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(upload.status<sp/>==<sp/>UPLOAD_FILE_START)<sp/>{</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>String<sp/>filename<sp/>=<sp/>upload.filename;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!filename.startsWith(</highlight><highlight class="stringliteral">&quot;/&quot;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>filename<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;/&quot;</highlight><highlight class="normal"><sp/>+<sp/>filename;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>DBG_OUTPUT_PORT.print(</highlight><highlight class="stringliteral">&quot;handleFileUpload<sp/>Name:<sp/>&quot;</highlight><highlight class="normal">);<sp/>DBG_OUTPUT_PORT.println(filename);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>fsUploadFile<sp/>=<sp/>FILESYSTEM.open(filename,<sp/></highlight><highlight class="stringliteral">&quot;w&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>filename<sp/>=<sp/>String();</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(upload.status<sp/>==<sp/>UPLOAD_FILE_WRITE)<sp/>{</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//DBG_OUTPUT_PORT.print(&quot;handleFileUpload<sp/>Data:<sp/>&quot;);<sp/>DBG_OUTPUT_PORT.println(upload.currentSize);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fsUploadFile)<sp/>{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>fsUploadFile.write(upload.buf,<sp/>upload.currentSize);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(upload.status<sp/>==<sp/>UPLOAD_FILE_END)<sp/>{</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fsUploadFile)<sp/>{</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>fsUploadFile.close();</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>DBG_OUTPUT_PORT.print(</highlight><highlight class="stringliteral">&quot;handleFileUpload<sp/>Size:<sp/>&quot;</highlight><highlight class="normal">);<sp/>DBG_OUTPUT_PORT.println(upload.totalSize);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="169"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>handleFileDelete()<sp/>{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(server.args()<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>server.send(500,<sp/></highlight><highlight class="stringliteral">&quot;text/plain&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;BAD<sp/>ARGS&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/>String<sp/>path<sp/>=<sp/>server.arg(0);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/>DBG_OUTPUT_PORT.println(</highlight><highlight class="stringliteral">&quot;handleFileDelete:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>path);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(path<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;/&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>server.send(500,<sp/></highlight><highlight class="stringliteral">&quot;text/plain&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;BAD<sp/>PATH&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!exists(path))<sp/>{</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>server.send(404,<sp/></highlight><highlight class="stringliteral">&quot;text/plain&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;FileNotFound&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/>FILESYSTEM.remove(path);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/>server.send(200,<sp/></highlight><highlight class="stringliteral">&quot;text/plain&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/>path<sp/>=<sp/>String();</highlight></codeline>
+<codeline lineno="186"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>handleFileCreate()<sp/>{</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(server.args()<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>server.send(500,<sp/></highlight><highlight class="stringliteral">&quot;text/plain&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;BAD<sp/>ARGS&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/>String<sp/>path<sp/>=<sp/>server.arg(0);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/>DBG_OUTPUT_PORT.println(</highlight><highlight class="stringliteral">&quot;handleFileCreate:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>path);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(path<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;/&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>server.send(500,<sp/></highlight><highlight class="stringliteral">&quot;text/plain&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;BAD<sp/>PATH&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(exists(path))<sp/>{</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>server.send(500,<sp/></highlight><highlight class="stringliteral">&quot;text/plain&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;FILE<sp/>EXISTS&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/>File<sp/>file<sp/>=<sp/>FILESYSTEM.open(path,<sp/></highlight><highlight class="stringliteral">&quot;w&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(file)<sp/>{</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/>file.close();</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>server.send(500,<sp/></highlight><highlight class="stringliteral">&quot;text/plain&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;CREATE<sp/>FAILED&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/>server.send(200,<sp/></highlight><highlight class="stringliteral">&quot;text/plain&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/>path<sp/>=<sp/>String();</highlight></codeline>
+<codeline lineno="208"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>handleFileList()<sp/>{</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!server.hasArg(</highlight><highlight class="stringliteral">&quot;dir&quot;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/>server.send(500,<sp/></highlight><highlight class="stringliteral">&quot;text/plain&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;BAD<sp/>ARGS&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/>String<sp/>path<sp/>=<sp/>server.arg(</highlight><highlight class="stringliteral">&quot;dir&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/>DBG_OUTPUT_PORT.println(</highlight><highlight class="stringliteral">&quot;handleFileList:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>path);</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/>File<sp/>root<sp/>=<sp/>FILESYSTEM.open(path);</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/>path<sp/>=<sp/>String();</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/>String<sp/>output<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;[&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(root.isDirectory()){</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>File<sp/>file<sp/>=<sp/>root.openNextFile();</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(file){</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(output<sp/>!=<sp/></highlight><highlight class="stringliteral">&quot;[&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>output<sp/>+=<sp/></highlight><highlight class="charliteral">&apos;,&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>output<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;{\&quot;type\&quot;:\&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>output<sp/>+=<sp/>(file.isDirectory())<sp/>?<sp/></highlight><highlight class="stringliteral">&quot;dir&quot;</highlight><highlight class="normal"><sp/>:<sp/></highlight><highlight class="stringliteral">&quot;file&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>output<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;\&quot;,\&quot;name\&quot;:\&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>output<sp/>+=<sp/>String(file.name()).substring(1);</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>output<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;\&quot;}&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>file<sp/>=<sp/>root.openNextFile();</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/>output<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;]&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/>server.send(200,<sp/></highlight><highlight class="stringliteral">&quot;text/json&quot;</highlight><highlight class="normal">,<sp/>output);</highlight></codeline>
+<codeline lineno="240"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>recordEvent<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*desc)<sp/>{</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>Open<sp/>filesystem,<sp/>open<sp/>for<sp/>append,<sp/>or,<sp/>create<sp/>file<sp/>named<sp/>&apos;eventlog.csv&apos;</highlight></codeline>
+<codeline lineno="244"><highlight class="comment"><sp/><sp/><sp/>*<sp/><sp/>store<sp/>function<sp/>arguments<sp/>as<sp/>a<sp/>line,<sp/>close<sp/>file,<sp/>close<sp/>FS.</highlight></codeline>
+<codeline lineno="245"><highlight class="comment"><sp/><sp/><sp/>*<sp/><sp/>if<sp/>fail,<sp/>return<sp/>a<sp/>negative<sp/>error<sp/>code<sp/></highlight></codeline>
+<codeline lineno="246"><highlight class="comment"><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/>setCpuFrequencyMhz(240);<sp/></highlight><highlight class="comment">//<sp/>to<sp/>WRITE<sp/>THE<sp/>FILE<sp/>FASTER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/>TTGOClass<sp/>*ttgo<sp/>=<sp/>TTGOClass::getWatch();<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>pointer<sp/>to<sp/>watch<sp/>internals</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/>PCF8563_Class<sp/>*rtc<sp/>=<sp/>ttgo-&gt;rtc;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>pointer<sp/>to<sp/>RTC<sp/>(real-time<sp/>clock)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>if<sp/>(FILESYSTEM.begin())<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>O<sp/>sistema<sp/>de<sp/>arquivos<sp/>pode<sp/>estar<sp/>montado<sp/>porque<sp/>o<sp/>servidor<sp/>está<sp/>ativo.</highlight></codeline>
+<codeline lineno="252"><highlight class="comment"><sp/>*<sp/>Neste<sp/>caso,<sp/>não<sp/>convém<sp/>desmontar<sp/>o<sp/>sistema<sp/>de<sp/>arquivo.</highlight></codeline>
+<codeline lineno="253"><highlight class="comment"><sp/>*<sp/>MAS<sp/>a<sp/>API<sp/>não<sp/>tem<sp/>função<sp/>que<sp/>verifica<sp/>se<sp/>o<sp/>FS<sp/>está<sp/>ou<sp/>não<sp/>montado.</highlight></codeline>
+<codeline lineno="254"><highlight class="comment"><sp/>*<sp/>então<sp/>vou<sp/>testar<sp/>o<sp/>flag<sp/>webServerFSStarted.</highlight></codeline>
+<codeline lineno="255"><highlight class="comment"><sp/>*<sp/>esta<sp/>função<sp/>não<sp/>muda<sp/>o<sp/>flag<sp/>do<sp/>web<sp/>server.</highlight></codeline>
+<codeline lineno="256"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!webServerFSStarted)<sp/>FILESYSTEM.begin();</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/>File<sp/>file<sp/>=<sp/>FILESYSTEM.open(</highlight><highlight class="stringliteral">&quot;/eventLog.csv&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;a&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>recordBuffer[1024];</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/>recordBuffer[0]=</highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//<sp/>empty<sp/>string</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/>strcat<sp/>(recordBuffer,rtc-&gt;formatDateTime(PCF_TIMEFORMAT_YYYY_MM_DD));<sp/><sp/></highlight><highlight class="comment">//<sp/>libraries/TTGO_TWatch_Library/src/drive/rtc/pcf8563.cpp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/>strcat<sp/>(recordBuffer,<sp/></highlight><highlight class="stringliteral">&quot;T&quot;</highlight><highlight class="normal">);<sp/><sp/></highlight><highlight class="comment">//<sp/>https://en.wikipedia.org/wiki/ISO_8601</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/>strcat<sp/>(recordBuffer,<sp/>rtc-&gt;formatDateTime(PCF_TIMEFORMAT_HMS));<sp/></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/>strcat<sp/>(recordBuffer,<sp/></highlight><highlight class="stringliteral">&quot;-03&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/>strcat<sp/>(recordBuffer,<sp/></highlight><highlight class="stringliteral">&quot;<sp/>;<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/>strcat<sp/>(recordBuffer,<sp/>desc);</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/>file.println<sp/>(recordBuffer);</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/>file.close();</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!webServerFSStarted)<sp/>FILESYSTEM.end();<sp/></highlight><highlight class="comment">//<sp/>https://arduino-esp8266.readthedocs.io/en/latest/filesystem.html#end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;<sp/></highlight><highlight class="comment">//<sp/>OK</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="FSWebServerNoScreen_8cpp_1a0eb8be4b5aad5940f26990d4d28f1eca" kindref="member">startWebServerFS</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/>setCpuFrequencyMhz(240);<sp/></highlight><highlight class="comment">//<sp/>maximum<sp/>speed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/>DBG_OUTPUT_PORT.begin(115200);</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/>DBG_OUTPUT_PORT.print(</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/>DBG_OUTPUT_PORT.setDebugOutput(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(FORMAT_FILESYSTEM)<sp/>FILESYSTEM.format();</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/>FILESYSTEM.begin();</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>File<sp/>root<sp/>=<sp/>FILESYSTEM.open(</highlight><highlight class="stringliteral">&quot;/&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>File<sp/>file<sp/>=<sp/>root.openNextFile();</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(file){</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>String<sp/>fileName<sp/>=<sp/>file.name();</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>fileSize<sp/>=<sp/>file.size();</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DBG_OUTPUT_PORT.printf(</highlight><highlight class="stringliteral">&quot;FS<sp/>File:<sp/>%s,<sp/>size:<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/>fileName.c_str(),<sp/>formatBytes(fileSize).c_str());</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>file<sp/>=<sp/>root.openNextFile();</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>DBG_OUTPUT_PORT.printf(</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><ref refid="NetworkNoScreen_8cpp_1a40d26e533935b20ac90a7b3b46945bd8" kindref="member">wiFiOn</ref>();</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/>MDNS.begin(host);</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/>DBG_OUTPUT_PORT.print(</highlight><highlight class="stringliteral">&quot;Open<sp/>http://&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/>DBG_OUTPUT_PORT.print(host);</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/>DBG_OUTPUT_PORT.println(</highlight><highlight class="stringliteral">&quot;.local/edit<sp/>to<sp/>see<sp/>the<sp/>file<sp/>browser&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight></codeline>
+<codeline lineno="300"><highlight class="normal"></highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//SERVER<sp/>INIT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//list<sp/>directory</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/>server.on(</highlight><highlight class="stringliteral">&quot;/list&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>handleFileList);</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//load<sp/>editor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/>server.on(</highlight><highlight class="stringliteral">&quot;/edit&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[]()<sp/>{</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!handleFileRead(</highlight><highlight class="stringliteral">&quot;/edit.htm&quot;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>server.send(404,<sp/></highlight><highlight class="stringliteral">&quot;text/plain&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;FileNotFound&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/>});</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//create<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/>server.on(</highlight><highlight class="stringliteral">&quot;/edit&quot;</highlight><highlight class="normal">,<sp/>HTTP_PUT,<sp/>handleFileCreate);</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//delete<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/>server.on(</highlight><highlight class="stringliteral">&quot;/edit&quot;</highlight><highlight class="normal">,<sp/>HTTP_DELETE,<sp/>handleFileDelete);</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//first<sp/>callback<sp/>is<sp/>called<sp/>after<sp/>the<sp/>request<sp/>has<sp/>ended<sp/>with<sp/>all<sp/>parsed<sp/>arguments</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//second<sp/>callback<sp/>handles<sp/>file<sp/>uploads<sp/>at<sp/>that<sp/>location</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/>server.on(</highlight><highlight class="stringliteral">&quot;/edit&quot;</highlight><highlight class="normal">,<sp/>HTTP_POST,<sp/>[]()<sp/>{</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/>server.send(200,<sp/></highlight><highlight class="stringliteral">&quot;text/plain&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/>},<sp/>handleFileUpload);</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"></highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//called<sp/>when<sp/>the<sp/>url<sp/>is<sp/>not<sp/>defined<sp/>here</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//use<sp/>it<sp/>to<sp/>load<sp/>content<sp/>from<sp/>FILESYSTEM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/>server.onNotFound([]()<sp/>{</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!handleFileRead(server.uri()))<sp/>{</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>server.send(404,<sp/></highlight><highlight class="stringliteral">&quot;text/plain&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;FileNotFound&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/>});</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//get<sp/>heap<sp/>status,<sp/>analog<sp/>input<sp/>value<sp/>and<sp/>all<sp/>GPIO<sp/>statuses<sp/>in<sp/>one<sp/>json<sp/>call</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/>server.on(</highlight><highlight class="stringliteral">&quot;/all&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[]()<sp/>{</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/>String<sp/>json<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;{&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/>json<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;\&quot;heap\&quot;:&quot;</highlight><highlight class="normal"><sp/>+<sp/>String(ESP.getFreeHeap());</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>json<sp/>+=<sp/>&quot;,<sp/>\&quot;analog\&quot;:&quot;<sp/>+<sp/>String(analogRead(A0));</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/>json<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;,<sp/>\&quot;analog\&quot;:&quot;</highlight><highlight class="normal"><sp/>+<sp/>String(255);</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/>json<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;,<sp/>\&quot;gpio\&quot;:&quot;</highlight><highlight class="normal"><sp/>+<sp/>String((uint32_t)(0));</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/>json<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;}&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/>server.send(200,<sp/></highlight><highlight class="stringliteral">&quot;text/json&quot;</highlight><highlight class="normal">,<sp/>json);</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/>json<sp/>=<sp/>String();</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/>});</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/>server.begin();</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/>DBG_OUTPUT_PORT.println(</highlight><highlight class="stringliteral">&quot;HTTP<sp/>server<sp/>started&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"></highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/>webServerFSStarted<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"></highlight></codeline>
+<codeline lineno="344"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"></highlight></codeline>
+<codeline lineno="346"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="FSWebServerNoScreen_8cpp_1ab85d2b44d50825cf75349dcf7681bf70" kindref="member">closeWebServerandSPIFFSandWiFi</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/>webServerFSStarted=</highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/>server.stop();<sp/></highlight><highlight class="comment">//<sp/>https://github.com/esp8266/Arduino/blob/master/libraries/ESP8266WebServer/src/ESP8266WebServer.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/>FILESYSTEM.end();<sp/></highlight><highlight class="comment">//<sp/>https://arduino-esp8266.readthedocs.io/en/latest/filesystem.html#end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><ref refid="NetworkNoScreen_8cpp_1aa70dd1a4d3251d20a5a001013f0bb596" kindref="member">wiFiOff</ref>();</highlight></codeline>
+<codeline lineno="351"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"></highlight></codeline>
+<codeline lineno="353"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="FSWebServerNoScreen_8cpp_1acd30b7f65cbd3d6ab18b624c0c102ee5" kindref="member">webServerFSTestAndHandle</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){<sp/><sp/></highlight><highlight class="comment">//<sp/>to<sp/>insert<sp/>into<sp/>loop()<sp/>function</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(webServerFSStarted)</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/>server.handleClient();</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>webServerFSStarted;</highlight></codeline>
+<codeline lineno="357"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/fabio/Arduino/MyLvglWatch-20220910/FSWebServerNoScreen.cpp"/>
+  </compounddef>
+</doxygen>

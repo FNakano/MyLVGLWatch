@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_c96858cfb8aad826490687c3b241ffa5" kind="dir">
+    <compoundname>/home/fabio/Arduino/MyLvglWatch-20220905-C</compoundname>
+    <innerfile refid="config_8h">config.h</innerfile>
+    <innerfile refid="DateTimeScreen_8cpp">DateTimeScreen.cpp</innerfile>
+    <innerfile refid="DateTimeScreen_8h">DateTimeScreen.h</innerfile>
+    <innerfile refid="FSWebServerNoScreen_8cpp">FSWebServerNoScreen.cpp</innerfile>
+    <innerfile refid="FSWebServerNoScreen_8h">FSWebServerNoScreen.h</innerfile>
+    <innerfile refid="HardwareAbstraction_8cpp">HardwareAbstraction.cpp</innerfile>
+    <innerfile refid="HardwareAbstraction_8h">HardwareAbstraction.h</innerfile>
+    <innerfile refid="MyLvglWatch-20220905-C_8ino">MyLvglWatch-20220905-C.ino</innerfile>
+    <innerfile refid="nbubb80_8c">nbubb80.c</innerfile>
+    <innerfile refid="NetworkNoScreen_8cpp">NetworkNoScreen.cpp</innerfile>
+    <innerfile refid="NetworkNoScreen_8h">NetworkNoScreen.h</innerfile>
+    <innerfile refid="Styles_8cpp">Styles.cpp</innerfile>
+    <innerfile refid="Styles_8h">Styles.h</innerfile>
+    <innerfile refid="WSScreen_8cpp">WSScreen.cpp</innerfile>
+    <innerfile refid="WSScreen_8h">WSScreen.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/fabio/Arduino/MyLvglWatch-20220905-C/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,525 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="WSScreen_8cpp" kind="file" language="C++">
+    <compoundname>WSScreen.cpp</compoundname>
+    <includes refid="DateTimeScreen_8h" local="yes">DateTimeScreen.h</includes>
+    <includes refid="FSWebServerNoScreen_8h" local="yes">FSWebServerNoScreen.h</includes>
+    <includes refid="HardwareAbstraction_8h" local="yes">HardwareAbstraction.h</includes>
+    <includes refid="NetworkNoScreen_8h" local="yes">NetworkNoScreen.h</includes>
+    <includes refid="Styles_8h" local="yes">Styles.h</includes>
+    <incdepgraph>
+      <node id="10">
+        <label>driver/adc.h</label>
+      </node>
+      <node id="2">
+        <label>DateTimeScreen.h</label>
+        <link refid="DateTimeScreen_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>HardwareAbstraction.h</label>
+        <link refid="HardwareAbstraction_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/fabio/Arduino/MyLvglWatch-20220910/WSScreen.cpp</label>
+        <link refid="WSScreen_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>Styles.h</label>
+        <link refid="Styles_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>time.h</label>
+      </node>
+      <node id="7">
+        <label>NetworkNoScreen.h</label>
+        <link refid="NetworkNoScreen_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>LilyGoWatch.h</label>
+      </node>
+      <node id="8">
+        <label>WiFi.h</label>
+      </node>
+      <node id="5">
+        <label>FSWebServerNoScreen.h</label>
+        <link refid="FSWebServerNoScreen_8h_source"/>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="WSScreen_8cpp_1ad68a769d07a9ce9854f445ae810326f4" prot="public" static="yes" mutable="no">
+        <type>lv_obj_t *</type>
+        <definition>lv_obj_t* fscont</definition>
+        <argsstring></argsstring>
+        <name>fscont</name>
+        <initializer>=NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>reference to the screen (container of graphical objects) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/WSScreen.cpp" line="24" column="17" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/WSScreen.cpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="WSScreen_8cpp_1a66cffc3c26c348f5c912e9a8aca6cbbb" prot="public" static="yes" mutable="no">
+        <type>lv_obj_t *</type>
+        <definition>lv_obj_t* toggleLabel</definition>
+        <argsstring></argsstring>
+        <name>toggleLabel</name>
+        <initializer>=NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>reference to graphical object: label to show if wifi is turned on/off. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/WSScreen.cpp" line="25" column="17" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/WSScreen.cpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="WSScreen_8cpp_1a7b86976e5879f81d54c97648403a0341" prot="public" static="yes" mutable="no">
+        <type>lv_obj_t *</type>
+        <definition>lv_obj_t* infoLabel</definition>
+        <argsstring></argsstring>
+        <name>infoLabel</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>reference to graphical object: top bar - shows time and battery level. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/WSScreen.cpp" line="26" column="17" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/WSScreen.cpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="WSScreen_8cpp_1ae1c5d59df183a5297e62520f171492fb" prot="public" static="yes" mutable="no">
+        <type>lv_obj_t *</type>
+        <definition>lv_obj_t* statusLabel</definition>
+        <argsstring></argsstring>
+        <name>statusLabel</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>reference to graphical object: label to show watch&apos;s IP address. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/WSScreen.cpp" line="27" column="17" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/WSScreen.cpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="WSScreen_8cpp_1a4a2108459979a81f55c88ecf6f09cb8f" prot="public" static="no" mutable="no">
+        <type>lv_task_t *</type>
+        <definition>lv_task_t* webserver_task</definition>
+        <argsstring></argsstring>
+        <name>webserver_task</name>
+        <initializer>=NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/WSScreen.cpp" line="38" column="11" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/WSScreen.cpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="WSScreen_8cpp_1a8afd16649ea8d46256f9bf48ac0b379c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int recordEvent</definition>
+        <argsstring>(const char *desc)</argsstring>
+        <name>recordEvent</name>
+        <param>
+          <type>const char *</type>
+          <declname>desc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/WSScreen.cpp" line="22" column="5" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/FSWebServerNoScreen.cpp" bodystart="242" bodyend="271" declfile="/home/fabio/Arduino/MyLvglWatch-20220910/WSScreen.cpp" declline="22" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="WSScreen_8cpp_1a49ddf8146f79dca64dac9e5883730f7b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void lv_update_task</definition>
+        <argsstring>(struct _lv_task_t *)</argsstring>
+        <name>lv_update_task</name>
+        <param>
+          <type>struct _lv_task_t *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/WSScreen.cpp" line="49" column="13" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/WSScreen.cpp" bodystart="49" bodyend="55" declfile="/home/fabio/Arduino/MyLvglWatch-20220910/WSScreen.cpp" declline="29" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="WSScreen_8cpp_1aeb1c8f43a92c7594f91bffffeb30678e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void updateScreenData3</definition>
+        <argsstring>()</argsstring>
+        <name>updateScreenData3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Update data (text, values) displayed in graphical objects (e.g. time, battery level, IP address,...) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/WSScreen.cpp" line="31" column="6" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/WSScreen.cpp" bodystart="31" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="WSScreen_8cpp_1ae8e1782c924eaf3aaa021781573ba06c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void lv_webserver_task</definition>
+        <argsstring>(struct _lv_task_t *)</argsstring>
+        <name>lv_webserver_task</name>
+        <param>
+          <type>struct _lv_task_t *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/WSScreen.cpp" line="40" column="13" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/WSScreen.cpp" bodystart="40" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="WSScreen_8cpp_1a398a4e4715b721e783ed304b1b24527b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void button_event_handler</definition>
+        <argsstring>(lv_obj_t *obj, lv_event_t event)</argsstring>
+        <name>button_event_handler</name>
+        <param>
+          <type>lv_obj_t *</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>lv_event_t</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/WSScreen.cpp" line="57" column="13" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/WSScreen.cpp" bodystart="57" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="WSScreen_8cpp_1abb649d204e59e5dfbfe35e95e0e2f6d7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void toggle_event_handler</definition>
+        <argsstring>(lv_obj_t *obj, lv_event_t event)</argsstring>
+        <name>toggle_event_handler</name>
+        <param>
+          <type>lv_obj_t *</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>lv_event_t</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/WSScreen.cpp" line="80" column="13" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/WSScreen.cpp" bodystart="80" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="WSScreen_8cpp_1a6ddbaa712e828edb0d6b03e5154eca93" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void createFSSInfoBar</definition>
+        <argsstring>(lv_obj_t *cont)</argsstring>
+        <name>createFSSInfoBar</name>
+        <param>
+          <type>lv_obj_t *</type>
+          <declname>cont</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/WSScreen.cpp" line="113" column="6" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/WSScreen.cpp" bodystart="113" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="WSScreen_8cpp_1a14b3e39e52d541ac1ff9dcafe8fe6774" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void createFSSStatusLabel</definition>
+        <argsstring>(lv_obj_t *cont)</argsstring>
+        <name>createFSSStatusLabel</name>
+        <param>
+          <type>lv_obj_t *</type>
+          <declname>cont</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/WSScreen.cpp" line="129" column="6" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/WSScreen.cpp" bodystart="129" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="WSScreen_8cpp_1ab0447634f63d535f9fe1dc20b1bda8a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void createFSSButtons</definition>
+        <argsstring>(lv_obj_t *cont)</argsstring>
+        <name>createFSSButtons</name>
+        <param>
+          <type>lv_obj_t *</type>
+          <declname>cont</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/WSScreen.cpp" line="137" column="6" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/WSScreen.cpp" bodystart="137" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="WSScreen_8cpp_1a287ba958a4726b8da4bab73e0dd9467d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void buildWatchFace3</definition>
+        <argsstring>()</argsstring>
+        <name>buildWatchFace3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create and display the watch face for file transfer, place graphical objects in it, apply styles. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/WSScreen.cpp" line="159" column="6" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/WSScreen.cpp" bodystart="159" bodyend="192"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Compilation<sp/>PASSED.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>HOOKED<sp/>TO<sp/>FTPNOSCREEN</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>HOOKED<sp/>TO<sp/>DATETIMESCREEN</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>TOGGLE<sp/>BUTTON<sp/>OK</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>NOT<sp/>TESTED</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>2022-06-04</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>2022-08-31<sp/>-<sp/>TESTING</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>2022-08-31<sp/>-<sp/>TESTED<sp/>OK</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>2022-09-01<sp/>-<sp/>Fixed<sp/>association<sp/>between<sp/>toggle<sp/>and<sp/>WebServer<sp/>state,<sp/></highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Moved<sp/>webServerFSTestAndHandle()<sp/>out<sp/>of<sp/>loop()<sp/>function<sp/>to<sp/>LVGL<sp/>event<sp/>loop.</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>2022-09-04<sp/>-<sp/>Adjusted<sp/>wifi.ip<sp/>call<sp/>to<sp/>match<sp/>my<sp/>convention</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;DateTimeScreen.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;FSWebServerNoScreen.h&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>reuse<sp/>the<sp/>screen<sp/>to<sp/>try<sp/>out<sp/>FSWebServer.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;HardwareAbstraction.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;NetworkNoScreen.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Styles.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>recordEvent<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*desc);<sp/></highlight><highlight class="comment">//<sp/>the<sp/>only<sp/>function<sp/>from<sp/>FSWebServerNoScreen<sp/>I<sp/>need<sp/>in<sp/>this<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>lv_obj_t<sp/>*fscont=NULL;<sp/><sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="keyword">static</highlight><highlight class="normal"><sp/>lv_obj_t<sp/>*toggleLabel=NULL;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="keyword">static</highlight><highlight class="normal"><sp/>lv_obj_t<sp/>*infoLabel<sp/>=<sp/>NULL;<sp/><sp/></highlight></codeline>
+<codeline lineno="27"><highlight class="keyword">static</highlight><highlight class="normal"><sp/>lv_obj_t<sp/>*statusLabel<sp/>=<sp/>NULL;<sp/><sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>lv_update_task(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>_lv_task_t<sp/>*);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>updateScreenData3<sp/>()<sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>buf[64];<sp/></highlight><highlight class="comment">//<sp/>buffer<sp/>for<sp/>the<sp/>infolabel</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>sprintf<sp/>(buf,<sp/></highlight><highlight class="stringliteral">&quot;%s<sp/><sp/><sp/><sp/><sp/><sp/>%3d%s&quot;</highlight><highlight class="normal">,<sp/><ref refid="HardwareAbstraction_8cpp_1a3c3f5c277a7b86fc13d6a93e319fda8a" kindref="member">hourMinute</ref>(),<sp/><ref refid="HardwareAbstraction_8cpp_1ab7b5eea102b664f1b0c79df918fa337b" kindref="member">batPercentage</ref>(),<sp/></highlight><highlight class="stringliteral">&quot;%&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_label_set_text(infoLabel,<sp/>buf);<sp/><sp/></highlight><highlight class="comment">//<sp/>display<sp/>battery<sp/>level.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_label_set_text(statusLabel,<sp/><ref refid="NetworkNoScreen_8cpp_1ae3d8af61d86af4fa3c59e6b94b5cdee9" kindref="member">getIP</ref>());<sp/><sp/></highlight><highlight class="comment">//<sp/>display<sp/>IP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal">lv_task_t<sp/>*webserver_task=NULL;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>lv_webserver_task(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>_lv_task_t<sp/>*)<sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="comment"><sp/>*<sp/><sp/><sp/>Surrounded<sp/>updateScreenData3<sp/>call<sp/>with<sp/>lv_update_task<sp/>to<sp/>comply<sp/>with<sp/></highlight></codeline>
+<codeline lineno="43"><highlight class="comment"><sp/>*<sp/><sp/><sp/>lvgl<sp/>task<sp/>callback<sp/>prototype<sp/>(https://docs.lvgl.io/latest/en/html/overview/task.html)</highlight></codeline>
+<codeline lineno="44"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><ref refid="FSWebServerNoScreen_8cpp_1acd30b7f65cbd3d6ab18b624c0c102ee5" kindref="member">webServerFSTestAndHandle</ref>();</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>lv_update_task(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>_lv_task_t<sp/>*)<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="comment"><sp/>*<sp/><sp/><sp/>Surrounded<sp/>updateScreenData3<sp/>call<sp/>with<sp/>lv_update_task<sp/>to<sp/>comply<sp/>with<sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="comment"><sp/>*<sp/><sp/><sp/>lvgl<sp/>task<sp/>callback<sp/>prototype<sp/>(https://docs.lvgl.io/latest/en/html/overview/task.html)</highlight></codeline>
+<codeline lineno="53"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/>updateScreenData3<sp/>();</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>button_event_handler(lv_obj_t<sp/>*obj,<sp/>lv_event_t<sp/>event)</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="59"><highlight class="comment"><sp/>*<sp/>Handles<sp/>touch<sp/>(click)<sp/>events<sp/>on<sp/>the<sp/>button<sp/>in<sp/>this<sp/>screen.<sp/></highlight></codeline>
+<codeline lineno="60"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(event<sp/>==<sp/>LV_EVENT_CLICKED)<sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>this<sp/>event<sp/>happens<sp/>to<sp/>toggle<sp/>and<sp/>std<sp/>buttons.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//closeFTPandSPIFFSandWiFi();<sp/>//<sp/>turn<sp/>FTP<sp/>server<sp/>off<sp/>if<sp/>exits<sp/>the<sp/>screen</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(webserver_task)<sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>recordEvent<sp/>(</highlight><highlight class="stringliteral">&quot;Web<sp/>server<sp/>;<sp/>terminado&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lv_task_del(webserver_task);<sp/></highlight><highlight class="comment">//<sp/>remove<sp/>webserver<sp/>from<sp/>event<sp/>loop.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>webserver_task=NULL;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="FSWebServerNoScreen_8cpp_1ab85d2b44d50825cf75349dcf7681bf70" kindref="member">closeWebServerandSPIFFSandWiFi</ref>();</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="HardwareAbstraction_8cpp_1ab9d025edc2a2108cc9426fcf7b85b0f3" kindref="member">keepActive</ref>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>updateScreenData3();</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Serial.printf(</highlight><highlight class="stringliteral">&quot;Exit<sp/>Clicked\n&quot;</highlight><highlight class="normal">);<sp/></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DateTimeScreen_8cpp_1ace285eac2da2c8853a7e8c99fab8e18e" kindref="member">updateScreenData</ref>();</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DateTimeScreen_8cpp_1afcee8927440972f20beaf04b3e3f82c1" kindref="member">displayWatchFace</ref>();<sp/></highlight><highlight class="comment">//<sp/>não<sp/>reconstrói,<sp/>apenas<sp/>mostra.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>toggle_event_handler(lv_obj_t<sp/>*obj,<sp/>lv_event_t<sp/>event)</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="82"><highlight class="comment"><sp/>*<sp/>Handles<sp/>touch<sp/>(click)<sp/>events<sp/>on<sp/>the<sp/>toggle<sp/>button<sp/>in<sp/>this<sp/>screen.<sp/></highlight></codeline>
+<codeline lineno="83"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(event<sp/>==<sp/>LV_EVENT_VALUE_CHANGED)<sp/>{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Serial.printf(</highlight><highlight class="stringliteral">&quot;Toggled\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(lv_btn_get_state(obj))<sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>LV_BTN_STATE_CHECKED_RELEASED:<sp/></highlight><highlight class="comment">//<sp/>checked<sp/>and<sp/>released</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lv_label_set_text(toggleLabel,<sp/></highlight><highlight class="stringliteral">&quot;Turn<sp/>Server<sp/>off&quot;</highlight><highlight class="normal">);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>button<sp/>2<sp/>label<sp/>text.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>startFTP();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="FSWebServerNoScreen_8cpp_1a0eb8be4b5aad5940f26990d4d28f1eca" kindref="member">startWebServerFS</ref>();</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="NetworkNoScreen_8cpp_1ac09d49a5bcbab63c67fbf63e3eadc043" kindref="member">setClockNTP</ref>();<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>if<sp/>there<sp/>is<sp/>wifi<sp/>then<sp/>adjust<sp/>date<sp/>and<sp/>time.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>recordEvent<sp/>(</highlight><highlight class="stringliteral">&quot;Web<sp/>server<sp/>;<sp/>iniciado&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>webserver_task=lv_task_create(lv_webserver_task,<sp/>1,<sp/>LV_TASK_PRIO_MID,<sp/>NULL);<sp/></highlight><highlight class="comment">//<sp/>insert<sp/>the<sp/>callback<sp/>function<sp/>into<sp/>the<sp/>task/event<sp/>loop</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="HardwareAbstraction_8cpp_1ab9d025edc2a2108cc9426fcf7b85b0f3" kindref="member">keepActive</ref>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>LV_BTN_STATE_RELEASED:<sp/></highlight><highlight class="comment">//<sp/>unchecked<sp/>and<sp/>released</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(webserver_task)<sp/>{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>recordEvent<sp/>(</highlight><highlight class="stringliteral">&quot;Web<sp/>server<sp/>;<sp/>terminado&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lv_task_del(webserver_task);<sp/></highlight><highlight class="comment">//<sp/>remove<sp/>webserver<sp/>from<sp/>event<sp/>loop.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>webserver_task=NULL;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lv_label_set_text(toggleLabel,<sp/></highlight><highlight class="stringliteral">&quot;Turn<sp/>Server<sp/>on&quot;</highlight><highlight class="normal">);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>button<sp/>2<sp/>label<sp/>text.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//closeFTPandSPIFFSandWiFi();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="FSWebServerNoScreen_8cpp_1ab85d2b44d50825cf75349dcf7681bf70" kindref="member">closeWebServerandSPIFFSandWiFi</ref>();</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="HardwareAbstraction_8cpp_1ab9d025edc2a2108cc9426fcf7b85b0f3" kindref="member">keepActive</ref>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>updateScreenData3();</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>createFSSInfoBar<sp/>(lv_obj_t<sp/>*cont)<sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="115"><highlight class="comment"><sp/><sp/><sp/>*<sp/>Unable<sp/>to<sp/>create<sp/>other<sp/>function<sp/>with<sp/>same<sp/>name.</highlight></codeline>
+<codeline lineno="116"><highlight class="comment"><sp/><sp/><sp/>*<sp/></highlight></codeline>
+<codeline lineno="117"><highlight class="comment"><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_obj_t<sp/>*infoButton<sp/>=<sp/>lv_btn_create(cont,<sp/>NULL);<sp/></highlight><highlight class="comment">//<sp/>create<sp/>a<sp/>button<sp/>to<sp/>put<sp/>the<sp/>label<sp/>to<sp/>display<sp/>info<sp/>inside<sp/>it.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_obj_set_event_cb(infoButton,<sp/>NULL);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>will<sp/>not<sp/>respond<sp/>to<sp/>events.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>infoLabel<sp/>=<sp/>lv_label_create(infoButton,<sp/>NULL);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>create<sp/>a<sp/>label<sp/>inside<sp/>the<sp/>button<sp/>and<sp/>get<sp/>a<sp/>pointer<sp/>to<sp/>it.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_label_set_align(infoLabel,<sp/>LV_ALIGN_CENTER);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_obj_add_style(infoButton,<sp/>LV_OBJ_PART_MAIN,<sp/><ref refid="Styles_8cpp_1ab0628adb921c914cf6c9c62b7937d821" kindref="member">getInfoStyle</ref>());<sp/><sp/></highlight><highlight class="comment">//<sp/>apply<sp/>style<sp/>to<sp/>the<sp/>button.<sp/>label<sp/>style<sp/>is<sp/>set<sp/>by<sp/>&quot;inheritance&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_obj_set_size(infoButton,240,30);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_obj_align(infoButton,<sp/>cont,<sp/>LV_ALIGN_IN_TOP_LEFT,<sp/>0,<sp/>0);<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>place<sp/>the<sp/>button<sp/>relative<sp/>to<sp/>the<sp/>display<sp/>area</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="127"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>createFSSStatusLabel<sp/>(lv_obj_t<sp/>*cont)<sp/>{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>statusLabel<sp/>=<sp/>lv_label_create(cont,<sp/>NULL);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_obj_add_style(statusLabel,<sp/>LV_OBJ_PART_MAIN,<sp/><ref refid="Styles_8cpp_1ab0628adb921c914cf6c9c62b7937d821" kindref="member">getInfoStyle</ref>());<sp/><sp/></highlight><highlight class="comment">//<sp/>apply<sp/>style<sp/>to<sp/>the<sp/>label.<sp/>label<sp/>style<sp/>is<sp/>set<sp/>by<sp/>&quot;inheritance&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_label_set_text(statusLabel,<sp/></highlight><highlight class="stringliteral">&quot;T-Watch&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_obj_align(statusLabel,<sp/>NULL,<sp/>LV_ALIGN_CENTER,<sp/>0,<sp/>0);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="135"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>createFSSButtons<sp/>(lv_obj_t<sp/>*cont)<sp/>{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>button<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_obj_t<sp/>*label;<sp/><sp/></highlight><highlight class="comment">//<sp/>label<sp/>-<sp/>auxiliary<sp/>pointer<sp/>to<sp/>some<sp/>button&apos;s<sp/>label.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_obj_t<sp/>*btn1<sp/>=<sp/>lv_btn_create(cont,<sp/>NULL);<sp/><sp/></highlight><highlight class="comment">//<sp/>create<sp/>button<sp/>1.<sp/>Its<sp/>parent<sp/>is<sp/>the<sp/>container</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_obj_set_event_cb(btn1,<sp/>button_event_handler);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>button<sp/>1<sp/>event<sp/>handler</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_obj_add_style(btn1,<sp/>LV_OBJ_PART_MAIN,<sp/><ref refid="Styles_8cpp_1acb0e97b90ad6ab96bb7138f87615cd0c" kindref="member">getFSSButtonStyle</ref>());<sp/><sp/></highlight><highlight class="comment">//<sp/>apply<sp/>style<sp/>to<sp/>the<sp/>label.<sp/>label<sp/>style<sp/>is<sp/>set<sp/>by<sp/>&quot;inheritance&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_obj_set_size(btn1,200,30);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_obj_align(btn1,<sp/>NULL,<sp/>LV_ALIGN_CENTER,<sp/>0,<sp/>-50);<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>button<sp/>1<sp/>text<sp/>alignment</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>label<sp/>=<sp/>lv_label_create(btn1,<sp/>NULL);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>create<sp/>a<sp/>label<sp/>inside<sp/>button<sp/>1<sp/>and<sp/>get<sp/>a<sp/>pointer<sp/>to<sp/>it.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_label_set_text(label,<sp/></highlight><highlight class="stringliteral">&quot;Exit<sp/>screen&quot;</highlight><highlight class="normal">);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>button<sp/>1<sp/>label<sp/>text</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>button<sp/>2<sp/>(checkbutton)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_obj_t<sp/>*btn2<sp/>=<sp/>lv_btn_create(cont,<sp/>NULL);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_obj_set_event_cb(btn2,<sp/>toggle_event_handler);<sp/></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_obj_add_style(btn2,<sp/>LV_OBJ_PART_MAIN,<sp/><ref refid="Styles_8cpp_1acb0e97b90ad6ab96bb7138f87615cd0c" kindref="member">getFSSButtonStyle</ref>());<sp/><sp/></highlight><highlight class="comment">//<sp/>apply<sp/>style<sp/>to<sp/>the<sp/>label.<sp/>label<sp/>style<sp/>is<sp/>set<sp/>by<sp/>&quot;inheritance&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_obj_set_size(btn2,200,30);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_obj_align(btn2,<sp/>NULL,<sp/>LV_ALIGN_CENTER,<sp/>0,<sp/>50);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_btn_set_checkable(btn2,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>button<sp/>2<sp/>is<sp/>a<sp/>checkbutton</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>toggleLabel<sp/>=<sp/>lv_label_create(btn2,<sp/>NULL);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>create<sp/>a<sp/>label<sp/>inside<sp/>button<sp/>2<sp/>and<sp/>get<sp/>a<sp/>pointer<sp/>to<sp/>it.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_label_set_text(toggleLabel,<sp/></highlight><highlight class="stringliteral">&quot;Turn<sp/>Server<sp/>on&quot;</highlight><highlight class="normal">);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>button<sp/>2<sp/>label<sp/>text.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>buildWatchFace3<sp/>()<sp/>{</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="161"><highlight class="comment"><sp/>*<sp/>Build<sp/>a<sp/>watch<sp/>face<sp/>(a<sp/>screen)<sp/>containing<sp/>one<sp/>button,</highlight></codeline>
+<codeline lineno="162"><highlight class="comment"><sp/>*<sp/>one<sp/>label<sp/>and<sp/>one<sp/>toggle.</highlight></codeline>
+<codeline lineno="163"><highlight class="comment"><sp/>*<sp/>Click<sp/>on<sp/>the<sp/>button<sp/>to<sp/>display<sp/>current<sp/>time<sp/>in<sp/>the<sp/>label.</highlight></codeline>
+<codeline lineno="164"><highlight class="comment"><sp/>*<sp/>Click<sp/>on<sp/>the<sp/>toggle<sp/>to<sp/>change<sp/>its<sp/>state<sp/>(color).</highlight></codeline>
+<codeline lineno="165"><highlight class="comment"><sp/>*<sp/>Events<sp/>are<sp/>also<sp/>logged<sp/>in<sp/>the<sp/>serial<sp/>monitor.</highlight></codeline>
+<codeline lineno="166"><highlight class="comment"><sp/>*<sp/>Shows<sp/>how<sp/>to<sp/>create<sp/>and<sp/>load<sp/>screen<sp/>and<sp/>container<sp/>objects</highlight></codeline>
+<codeline lineno="167"><highlight class="comment"><sp/>*<sp/>It<sp/>seems<sp/>slower<sp/>than<sp/>getting<sp/>current<sp/>screen<sp/>and<sp/>modifying<sp/>it.</highlight></codeline>
+<codeline lineno="168"><highlight class="comment"><sp/>*<sp/></highlight></codeline>
+<codeline lineno="169"><highlight class="comment"><sp/>*<sp/>This<sp/>watch<sp/>face<sp/>is<sp/>quite<sp/>different<sp/>of<sp/>DateTimeScreen.</highlight></codeline>
+<codeline lineno="170"><highlight class="comment"><sp/>*<sp/>This<sp/>code<sp/>creates<sp/>a<sp/>new<sp/>screen,<sp/>style<sp/>widgets,<sp/>place<sp/>them,</highlight></codeline>
+<codeline lineno="171"><highlight class="comment"><sp/>*<sp/>insert<sp/>the<sp/>screen<sp/>update<sp/>function<sp/>as<sp/>a<sp/>task<sp/>in<sp/>the<sp/>LVGL<sp/>event<sp/>loop</highlight></codeline>
+<codeline lineno="172"><highlight class="comment"><sp/>*<sp/>and<sp/>(finally)<sp/>loads<sp/>the<sp/>screen<sp/>on<sp/>the<sp/>display<sp/></highlight></codeline>
+<codeline lineno="173"><highlight class="comment"><sp/>*<sp/>(LVGL<sp/>lingo/parlance:<sp/>display<sp/>=<sp/>physical<sp/>display<sp/>device;</highlight></codeline>
+<codeline lineno="174"><highlight class="comment"><sp/>*<sp/>screen<sp/>=<sp/>representation<sp/>of<sp/>the<sp/>display<sp/>in<sp/>which<sp/>widgets<sp/>can<sp/>be<sp/>set;</highlight></codeline>
+<codeline lineno="175"><highlight class="comment"><sp/>*<sp/>it<sp/>is<sp/>possible<sp/>to<sp/>have<sp/>many<sp/>screens<sp/>but<sp/>only<sp/>one<sp/>is<sp/>loaded<sp/>onto</highlight></codeline>
+<codeline lineno="176"><highlight class="comment"><sp/>*<sp/>a<sp/>display<sp/>at<sp/>a<sp/>time.</highlight></codeline>
+<codeline lineno="177"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fscont==NULL)<sp/>{</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>create<sp/>objects*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>fscont<sp/>=<sp/>lv_obj_create<sp/>(NULL,<sp/>NULL);<sp/></highlight><highlight class="comment">//<sp/>https://docs.lvgl.io/latest/en/html/widgets/obj.html#screens</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>lv_obj_add_style(fscont,<sp/>LV_OBJ_PART_MAIN,<sp/><ref refid="Styles_8cpp_1ac61b53571d11d7d6ee80860e2e8fdcd0" kindref="member">getBkgdStyle</ref>());<sp/><sp/></highlight><highlight class="comment">//<sp/>apply<sp/>style</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>createFSSButtons(fscont);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>createFSSInfoBar(fscont);</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>createFSSStatusLabel(fscont);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>lv_task_create(lv_update_task,<sp/>60000,<sp/>LV_TASK_PRIO_LOWEST,<sp/>NULL);<sp/></highlight><highlight class="comment">//<sp/>insert<sp/>the<sp/>callback<sp/>function<sp/>into<sp/>the<sp/>task/event<sp/>loop</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_scr_load(fscont);<sp/></highlight><highlight class="comment">//<sp/>load<sp/>the<sp/>screen<sp/>onto<sp/>the<sp/>display.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/fabio/Arduino/MyLvglWatch-20220910/WSScreen.cpp"/>
+  </compounddef>
+</doxygen>

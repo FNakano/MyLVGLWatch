@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="FSWebServerNoScreen_8h" kind="file" language="C++">
+    <compoundname>FSWebServerNoScreen.h</compoundname>
+    <includedby refid="WSScreen_8cpp" local="yes">/home/fabio/Arduino/MyLvglWatch-20220910/WSScreen.cpp</includedby>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="FSWebServerNoScreen_8h_1ae1d8f18bc4cb6e98fb186424904ca78b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void startWebServerFS</definition>
+        <argsstring>()</argsstring>
+        <name>startWebServerFS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Turns file browsing/transfer on. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/FSWebServerNoScreen.h" line="6" column="6" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/FSWebServerNoScreen.cpp" bodystart="273" bodyend="344" declfile="/home/fabio/Arduino/MyLvglWatch-20220910/FSWebServerNoScreen.h" declline="6" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="FSWebServerNoScreen_8h_1ab85d2b44d50825cf75349dcf7681bf70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void closeWebServerandSPIFFSandWiFi</definition>
+        <argsstring>()</argsstring>
+        <name>closeWebServerandSPIFFSandWiFi</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Turns file browsint/transfer off. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/FSWebServerNoScreen.h" line="9" column="6" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/FSWebServerNoScreen.cpp" bodystart="346" bodyend="351" declfile="/home/fabio/Arduino/MyLvglWatch-20220910/FSWebServerNoScreen.h" declline="9" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="FSWebServerNoScreen_8h_1acd30b7f65cbd3d6ab18b624c0c102ee5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool webServerFSTestAndHandle</definition>
+        <argsstring>(void)</argsstring>
+        <name>webServerFSTestAndHandle</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Check if someone (usually through a web browser) requested some page and responds to it. Example on how to use this function is in FSScreen.cpp</para>
+<para>Note for developers: this function should be added to LVGL event/task loop. <simplesect kind="return"><para>true if the web server is on (can be used to avoid going to deep sleep). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/FSWebServerNoScreen.h" line="17" column="6" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/FSWebServerNoScreen.cpp" bodystart="353" bodyend="357" declfile="/home/fabio/Arduino/MyLvglWatch-20220910/FSWebServerNoScreen.h" declline="17" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>FSWEBSERVERNOSCREEN_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FSWEBSERVERNOSCREEN_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="FSWebServerNoScreen_8cpp_1a0eb8be4b5aad5940f26990d4d28f1eca" kindref="member">startWebServerFS</ref>();</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="FSWebServerNoScreen_8cpp_1ab85d2b44d50825cf75349dcf7681bf70" kindref="member">closeWebServerandSPIFFSandWiFi</ref>();</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="FSWebServerNoScreen_8cpp_1acd30b7f65cbd3d6ab18b624c0c102ee5" kindref="member">webServerFSTestAndHandle</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/fabio/Arduino/MyLvglWatch-20220910/FSWebServerNoScreen.h"/>
+  </compounddef>
+</doxygen>

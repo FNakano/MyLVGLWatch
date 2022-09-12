@@ -1,0 +1,617 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="DateTimeScreen_8cpp" kind="file" language="C++">
+    <compoundname>DateTimeScreen.cpp</compoundname>
+    <includes refid="DateTimeScreen_8h" local="yes">DateTimeScreen.h</includes>
+    <includes refid="WSScreen_8h" local="yes">WSScreen.h</includes>
+    <includes refid="HardwareAbstraction_8h" local="yes">HardwareAbstraction.h</includes>
+    <includes refid="Styles_8h" local="yes">Styles.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.cpp</label>
+        <link refid="DateTimeScreen_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>WSScreen.h</label>
+        <link refid="WSScreen_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>DateTimeScreen.h</label>
+        <link refid="DateTimeScreen_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>HardwareAbstraction.h</label>
+        <link refid="HardwareAbstraction_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>Styles.h</label>
+        <link refid="Styles_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>LilyGoWatch.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="DateTimeScreen_8cpp_1a767b76382b0330e1cae3230045e074ec" prot="public" static="yes" mutable="no">
+        <type>lv_obj_t *</type>
+        <definition>lv_obj_t* cont</definition>
+        <argsstring></argsstring>
+        <name>cont</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>reference to the screen (container of graphical objects) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.cpp" line="17" column="17" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.cpp" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="DateTimeScreen_8cpp_1a4492096ee0b6c340c90a7003c4deb89f" prot="public" static="yes" mutable="no">
+        <type>lv_obj_t *</type>
+        <definition>lv_obj_t* timeLabel</definition>
+        <argsstring></argsstring>
+        <name>timeLabel</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>reference to graphical object: label to show time </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.cpp" line="18" column="17" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.cpp" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="DateTimeScreen_8cpp_1a7b86976e5879f81d54c97648403a0341" prot="public" static="yes" mutable="no">
+        <type>lv_obj_t *</type>
+        <definition>lv_obj_t* infoLabel</definition>
+        <argsstring></argsstring>
+        <name>infoLabel</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>reference to graphical object: label to show info (spec. date and batt) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.cpp" line="19" column="17" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.cpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="DateTimeScreen_8cpp_1aff6ac9cf39c5fdf03e134d3ebfd6d2dd" prot="public" static="yes" mutable="no">
+        <type>lv_obj_t *</type>
+        <definition>lv_obj_t* leftLabel</definition>
+        <argsstring></argsstring>
+        <name>leftLabel</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>reference to graphical object: label of the left button </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.cpp" line="20" column="17" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.cpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="DateTimeScreen_8cpp_1ad68a4c97c8b22880b4c27a9ac5deafee" prot="public" static="yes" mutable="no">
+        <type>lv_obj_t *</type>
+        <definition>lv_obj_t* rightLabel</definition>
+        <argsstring></argsstring>
+        <name>rightLabel</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>reference to graphical object: label of the right button </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.cpp" line="21" column="17" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.cpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="DateTimeScreen_8cpp_1acbd04bd9350e92b226711c023e3f08d8" prot="public" static="yes" mutable="no">
+        <type>int8_t</type>
+        <definition>int8_t curLev</definition>
+        <argsstring></argsstring>
+        <name>curLev</name>
+        <initializer>=0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>current brightness of the screen. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.cpp" line="23" column="15" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.cpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="DateTimeScreen_8cpp_1a8afd16649ea8d46256f9bf48ac0b379c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int recordEvent</definition>
+        <argsstring>(const char *desc)</argsstring>
+        <name>recordEvent</name>
+        <param>
+          <type>const char *</type>
+          <declname>desc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.cpp" line="10" column="5" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/FSWebServerNoScreen.cpp" bodystart="242" bodyend="271" declfile="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.cpp" declline="10" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="DateTimeScreen_8cpp_1ace285eac2da2c8853a7e8c99fab8e18e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void updateScreenData</definition>
+        <argsstring>()</argsstring>
+        <name>updateScreenData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Update data (text, values) displayed in graphical objects (e.g. time, date, battery level,...) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.cpp" line="29" column="6" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.cpp" bodystart="29" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="DateTimeScreen_8cpp_1ac52aa4c15c1d296137c9c3d647768643" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void infoEventHandler</definition>
+        <argsstring>(lv_obj_t *obj, lv_event_t event)</argsstring>
+        <name>infoEventHandler</name>
+        <param>
+          <type>lv_obj_t *</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>lv_event_t</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.cpp" line="47" column="13" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.cpp" bodystart="47" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="DateTimeScreen_8cpp_1a39f87eb545be39fb2c90bd6ca8fcf876" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void timeEventHandler</definition>
+        <argsstring>(lv_obj_t *obj, lv_event_t event)</argsstring>
+        <name>timeEventHandler</name>
+        <param>
+          <type>lv_obj_t *</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>lv_event_t</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.cpp" line="56" column="13" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.cpp" bodystart="56" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="DateTimeScreen_8cpp_1ade2aa85d72f846e6fd69bcac2e7fe755" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void rollerEventHandler</definition>
+        <argsstring>(lv_obj_t *obj, lv_event_t event)</argsstring>
+        <name>rollerEventHandler</name>
+        <param>
+          <type>lv_obj_t *</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>lv_event_t</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.cpp" line="68" column="13" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.cpp" bodystart="68" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="DateTimeScreen_8cpp_1a86848961298fe561820d6e0761ea46e5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void leftButtonEventHandler</definition>
+        <argsstring>(lv_obj_t *obj, lv_event_t event)</argsstring>
+        <name>leftButtonEventHandler</name>
+        <param>
+          <type>lv_obj_t *</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>lv_event_t</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.cpp" line="80" column="13" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.cpp" bodystart="80" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="DateTimeScreen_8cpp_1a1fd1ae9efa975e23272d415044d18416" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void rightButtonEventHandler</definition>
+        <argsstring>(lv_obj_t *obj, lv_event_t event)</argsstring>
+        <name>rightButtonEventHandler</name>
+        <param>
+          <type>lv_obj_t *</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>lv_event_t</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.cpp" line="90" column="13" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.cpp" bodystart="90" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="DateTimeScreen_8cpp_1a244c1fbbf812cffbb820c13c72bbe87a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LV_FONT_DECLARE</definition>
+        <argsstring>(lv_font_montserrat_14)</argsstring>
+        <name>LV_FONT_DECLARE</name>
+        <param>
+          <type>lv_font_montserrat_14</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.cpp" line="103" column="1" declfile="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.cpp" declline="103" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="DateTimeScreen_8cpp_1a956e119488c391b48ecc3870d8cdc8e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LV_FONT_DECLARE</definition>
+        <argsstring>(lv_font_montserrat_28)</argsstring>
+        <name>LV_FONT_DECLARE</name>
+        <param>
+          <type>lv_font_montserrat_28</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.cpp" line="104" column="1" declfile="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.cpp" declline="104" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="DateTimeScreen_8cpp_1a6016b76cebd2803de7864fe4d58aa77b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void createRoller</definition>
+        <argsstring>(lv_obj_t *cont)</argsstring>
+        <name>createRoller</name>
+        <param>
+          <type>lv_obj_t *</type>
+          <declname>cont</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.cpp" line="106" column="13" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.cpp" bodystart="106" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="DateTimeScreen_8cpp_1adc276f0f7546dc6e4aeadcc1c58fd175" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void createTimeButton</definition>
+        <argsstring>(lv_obj_t *cont)</argsstring>
+        <name>createTimeButton</name>
+        <param>
+          <type>lv_obj_t *</type>
+          <declname>cont</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.cpp" line="128" column="13" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.cpp" bodystart="128" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="DateTimeScreen_8cpp_1a4cdf26c48179a18d72aced5e1de2380b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void createInfoBar</definition>
+        <argsstring>(lv_obj_t *cont)</argsstring>
+        <name>createInfoBar</name>
+        <param>
+          <type>lv_obj_t *</type>
+          <declname>cont</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.cpp" line="139" column="13" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.cpp" bodystart="139" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="DateTimeScreen_8cpp_1ab4e7066638c7522321e3978aa354f724" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void createSideButtons</definition>
+        <argsstring>(lv_obj_t *cont)</argsstring>
+        <name>createSideButtons</name>
+        <param>
+          <type>lv_obj_t *</type>
+          <declname>cont</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.cpp" line="151" column="6" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.cpp" bodystart="151" bodyend="172"/>
+      </memberdef>
+      <memberdef kind="function" id="DateTimeScreen_8cpp_1a4731732655268e1bd1d8744b3b6d5c11" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void buildWatchFace</definition>
+        <argsstring>()</argsstring>
+        <name>buildWatchFace</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create this watch face, place graphical objects in it, apply styles. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.cpp" line="174" column="6" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.cpp" bodystart="174" bodyend="190"/>
+      </memberdef>
+      <memberdef kind="function" id="DateTimeScreen_8cpp_1afcee8927440972f20beaf04b3e3f82c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void displayWatchFace</definition>
+        <argsstring>()</argsstring>
+        <name>displayWatchFace</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Display the watch face. I.e. put it on the physical screen. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.cpp" line="192" column="6" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.cpp" bodystart="192" bodyend="198"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This file contains fuctions that define the screen first displayed when the watch is turned on. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="5"><highlight class="preprocessor">#include<sp/>&quot;DateTimeScreen.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;WSScreen.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;HardwareAbstraction.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Styles.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>recordEvent<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*desc);<sp/></highlight><highlight class="comment">//<sp/>the<sp/>only<sp/>function<sp/>from<sp/>FSWebServerNoScreen<sp/>I<sp/>need<sp/>in<sp/>this<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>after<sp/>buildWatchFace()<sp/>execution,<sp/>is<sp/>a<sp/>pointer<sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>to<sp/>the<sp/>LVGL<sp/>label<sp/>that<sp/>displays<sp/>time.<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>file<sp/>scope<sp/>variables.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>lv_obj_t<sp/>*cont<sp/>=<sp/>NULL;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="18"><highlight class="keyword">static</highlight><highlight class="normal"><sp/>lv_obj_t<sp/>*timeLabel<sp/>=<sp/>NULL;<sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="keyword">static</highlight><highlight class="normal"><sp/>lv_obj_t<sp/>*infoLabel<sp/>=<sp/>NULL;<sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="keyword">static</highlight><highlight class="normal"><sp/>lv_obj_t<sp/>*leftLabel<sp/>=<sp/>NULL;<sp/><sp/></highlight></codeline>
+<codeline lineno="21"><highlight class="keyword">static</highlight><highlight class="normal"><sp/>lv_obj_t<sp/>*rightLabel<sp/>=<sp/>NULL;<sp/><sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="keyword">static</highlight><highlight class="normal"><sp/>int8_t<sp/>curLev=0;<sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="comment">//#if<sp/>!defined(DOXYGEN_SHOULD_SKIP_THIS)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>SCREEN<sp/>DATA<sp/>UPDATER<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="DateTimeScreen_8cpp_1ace285eac2da2c8853a7e8c99fab8e18e" kindref="member">updateScreenData</ref><sp/>()<sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_label_set_text(timeLabel,<sp/><ref refid="HardwareAbstraction_8cpp_1a3c3f5c277a7b86fc13d6a93e319fda8a" kindref="member">hourMinute</ref>());<sp/><sp/></highlight><highlight class="comment">//<sp/>display<sp/>time<sp/>without<sp/>seconds</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>buf[64];<sp/></highlight><highlight class="comment">//<sp/>buffer<sp/>for<sp/>the<sp/>infolabel</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>sprintf<sp/>(buf,<sp/></highlight><highlight class="stringliteral">&quot;%s<sp/><sp/>%3d%s&quot;</highlight><highlight class="normal">,<sp/><ref refid="HardwareAbstraction_8cpp_1a8e09ea686ea49312846799fb6f51f47b" kindref="member">ymd</ref>(),<sp/><ref refid="HardwareAbstraction_8cpp_1ab7b5eea102b664f1b0c79df918fa337b" kindref="member">batPercentage</ref>(),<sp/></highlight><highlight class="stringliteral">&quot;%&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_label_set_text(infoLabel,<sp/>buf);<sp/><sp/></highlight><highlight class="comment">//<sp/>display<sp/>info</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>recordEvent<sp/>(</highlight><highlight class="stringliteral">&quot;Ver<sp/>Hora<sp/>;<sp/>atomico&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>test<sp/>strings<sp/>-<sp/>to<sp/>isolate<sp/>from<sp/>hardware<sp/>abstraction</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_label_set_text(timeLabel,<sp/></highlight><highlight class="stringliteral">&quot;22:22&quot;</highlight><highlight class="normal">);<sp/><sp/></highlight><highlight class="comment">//<sp/>display<sp/>time<sp/>without<sp/>seconds</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_label_set_text(infoLabel,<sp/></highlight><highlight class="stringliteral">&quot;2022-09-01<sp/><sp/>70%&quot;</highlight><highlight class="normal">);<sp/><sp/></highlight><highlight class="comment">//<sp/>display<sp/>info</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>EVENT<sp/>HANDLERS*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>infoEventHandler(lv_obj_t<sp/>*obj,<sp/>lv_event_t<sp/>event)</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(event<sp/>==<sp/>LV_EVENT_SHORT_CLICKED)<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buildWatchFace3();</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>updateScreenData3();</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Serial.printf(</highlight><highlight class="stringliteral">&quot;Clicked<sp/>on<sp/>infobar.\n&quot;</highlight><highlight class="normal">);<sp/></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>timeEventHandler(lv_obj_t<sp/>*obj,<sp/>lv_event_t<sp/>event)</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="comment">//<sp/>event<sp/>handler<sp/>for<sp/>the<sp/>time<sp/>button/label</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>TTGOClass<sp/>*ttgo<sp/>=<sp/>TTGOClass::getWatch();<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>pointer<sp/>to<sp/>watch<sp/>internals</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(event<sp/>==<sp/>LV_EVENT_SHORT_CLICKED)<sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>recordEvent<sp/>(</highlight><highlight class="stringliteral">&quot;Increase<sp/>Brightness<sp/>;<sp/>atomico&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>curLev=(curLev&gt;206)?255:curLev+50;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="HardwareAbstraction_8cpp_1ad818ce1edea73bf8ef4a499a068164f3" kindref="member">setDisplayBrightness</ref>(curLev);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DateTimeScreen_8cpp_1ace285eac2da2c8853a7e8c99fab8e18e" kindref="member">updateScreenData</ref>();</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>rollerEventHandler(lv_obj_t<sp/>*obj,<sp/>lv_event_t<sp/>event)</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(event<sp/>==<sp/>LV_EVENT_SHORT_CLICKED)<sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Serial.printf(</highlight><highlight class="stringliteral">&quot;<sp/>Short<sp/>clicked\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>buf[64];</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lv_roller_get_selected_str(obj,<sp/>buf,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(buf));</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lv_label_set_text(infoLabel,<sp/>strcat(buf,<sp/></highlight><highlight class="stringliteral">&quot;<sp/>;<sp/>iniciado&quot;</highlight><highlight class="normal">));<sp/><sp/></highlight><highlight class="comment">//<sp/>display<sp/>info</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>recordEvent(buf);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*There<sp/>could<sp/>be<sp/>other<sp/>events<sp/>that<sp/>should<sp/>not<sp/>trigger<sp/>anything.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>leftButtonEventHandler(lv_obj_t<sp/>*obj,<sp/>lv_event_t<sp/>event)</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(event<sp/>==<sp/>LV_EVENT_SHORT_CLICKED)<sp/>{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>buf[]=</highlight><highlight class="stringliteral">&quot;Rodar<sp/>;<sp/>iniciado&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>recordEvent(buf);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lv_label_set_text(infoLabel,<sp/>buf);<sp/><sp/></highlight><highlight class="comment">//<sp/>display<sp/>info</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Serial.printf(</highlight><highlight class="stringliteral">&quot;Clicked<sp/>on<sp/>left<sp/>button.\n&quot;</highlight><highlight class="normal">);<sp/></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>rightButtonEventHandler(lv_obj_t<sp/>*obj,<sp/>lv_event_t<sp/>event)</highlight></codeline>
+<codeline lineno="91"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(event<sp/>==<sp/>LV_EVENT_SHORT_CLICKED)<sp/>{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>buf[]=</highlight><highlight class="stringliteral">&quot;Esperar<sp/>;<sp/>iniciado&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>recordEvent(buf);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lv_label_set_text(infoLabel,<sp/>buf);<sp/><sp/></highlight><highlight class="comment">//<sp/>display<sp/>info</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Serial.printf(</highlight><highlight class="stringliteral">&quot;Clicked<sp/>on<sp/>right<sp/>button.\n&quot;</highlight><highlight class="normal">);<sp/></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>CREATE<sp/>OBJECTS<sp/>(button,<sp/>roller,<sp/>label,<sp/>...;</highlight></codeline>
+<codeline lineno="101"><highlight class="comment"><sp/>*<sp/>set<sp/>event<sp/>handler,<sp/>set<sp/>style<sp/>and<sp/>set<sp/>position<sp/>in<sp/>the<sp/>screen<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal">LV_FONT_DECLARE(lv_font_montserrat_14);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal">LV_FONT_DECLARE(lv_font_montserrat_28);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>createRoller(lv_obj_t<sp/>*cont)<sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_obj_t<sp/>*roller1<sp/>=<sp/>lv_roller_create(cont,<sp/>NULL);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_roller_set_options(roller1,</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Caminhar\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>&quot;Esperar\n&quot;<sp/>//<sp/>right<sp/>button</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>&quot;Rodar\n&quot;<sp/>//<sp/>left<sp/>button</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Oficina\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Comer\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Casa\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Passear\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Comprar\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Exercitar\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Descansar\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Grupo&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LV_ROLLER_MODE_INIFINITE);<sp/></highlight><highlight class="comment">//<sp/>not<sp/>nice<sp/>if<sp/>in<sp/>NORMAL<sp/>mode.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_obj_add_style(roller1,<sp/>LV_OBJ_PART_MAIN,<sp/><ref refid="Styles_8cpp_1ab229c9dfabca04a6acb493b27e517bec" kindref="member">getRollerStyle</ref>());<sp/><sp/></highlight><highlight class="comment">//<sp/>apply<sp/>style</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_roller_set_visible_row_count(roller1,<sp/>4);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_obj_align(roller1,<sp/>lv_scr_act(),<sp/>LV_ALIGN_IN_BOTTOM_RIGHT,<sp/>0,<sp/>0);<sp/></highlight><highlight class="comment">//<sp/>https://docs.lvgl.io/latest/en/html/widgets/obj.html?highlight=alignment#alignment</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_obj_set_event_cb(roller1,<sp/>rollerEventHandler);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>createTimeButton<sp/>(lv_obj_t<sp/>*cont)<sp/>{</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_obj_t<sp/>*timeButton<sp/>=<sp/>lv_btn_create(cont,<sp/>NULL);<sp/></highlight><highlight class="comment">//<sp/>create<sp/>a<sp/>button<sp/>to<sp/>put<sp/>the<sp/>label<sp/>to<sp/>display<sp/>time<sp/>inside<sp/>it.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_obj_set_event_cb(timeButton,<sp/>timeEventHandler);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>timeLabel<sp/>=<sp/>lv_label_create(timeButton,<sp/>NULL);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>create<sp/>a<sp/>label<sp/>inside<sp/>the<sp/>button<sp/>and<sp/>get<sp/>a<sp/>pointer<sp/>to<sp/>it.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_label_set_align(timeLabel,<sp/>LV_ALIGN_CENTER);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_obj_add_style(timeButton,<sp/>LV_OBJ_PART_MAIN,<sp/><ref refid="Styles_8cpp_1acf9e66c178373875f720e55a177fde79" kindref="member">getTimeStyle</ref>());<sp/><sp/></highlight><highlight class="comment">//<sp/>apply<sp/>style<sp/>to<sp/>the<sp/>button.<sp/>label<sp/>style<sp/>is<sp/>set<sp/>by<sp/>&quot;inheritance&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_obj_set_size(timeButton,240,100);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_obj_align(timeButton,<sp/>cont,<sp/>LV_ALIGN_CENTER,<sp/>0,<sp/>-50);<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>place<sp/>the<sp/>button<sp/>relative<sp/>to<sp/>the<sp/>display<sp/>area</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>createInfoBar<sp/>(lv_obj_t<sp/>*cont)<sp/>{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_obj_t<sp/>*infoButton<sp/>=<sp/>lv_btn_create(cont,<sp/>NULL);<sp/></highlight><highlight class="comment">//<sp/>create<sp/>a<sp/>button<sp/>to<sp/>put<sp/>the<sp/>label<sp/>to<sp/>display<sp/>info<sp/>inside<sp/>it.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_obj_set_event_cb(infoButton,<sp/>infoEventHandler);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>infoLabel<sp/>=<sp/>lv_label_create(infoButton,<sp/>NULL);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>create<sp/>a<sp/>label<sp/>inside<sp/>the<sp/>button<sp/>and<sp/>get<sp/>a<sp/>pointer<sp/>to<sp/>it.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_label_set_align(infoLabel,<sp/>LV_ALIGN_CENTER);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_obj_add_style(infoButton,<sp/>LV_OBJ_PART_MAIN,<sp/><ref refid="Styles_8cpp_1ab0628adb921c914cf6c9c62b7937d821" kindref="member">getInfoStyle</ref>());<sp/><sp/></highlight><highlight class="comment">//<sp/>apply<sp/>style<sp/>to<sp/>the<sp/>button.<sp/>label<sp/>style<sp/>is<sp/>set<sp/>by<sp/>&quot;inheritance&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_obj_set_size(infoButton,240,30);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_obj_align(infoButton,<sp/>cont,<sp/>LV_ALIGN_IN_TOP_LEFT,<sp/>0,<sp/>0);<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>place<sp/>the<sp/>button<sp/>relative<sp/>to<sp/>the<sp/>display<sp/>area</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="149"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>createSideButtons<sp/>(lv_obj_t<sp/>*cont)<sp/>{</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_obj_t<sp/>*leftButton<sp/>=<sp/>lv_btn_create(cont,<sp/>NULL);<sp/></highlight><highlight class="comment">//<sp/>create<sp/>a<sp/>button<sp/>to<sp/>put<sp/>the<sp/>label<sp/>to<sp/>display<sp/>info<sp/>inside<sp/>it.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_obj_set_event_cb(leftButton,<sp/>leftButtonEventHandler);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>leftLabel<sp/>=<sp/>lv_label_create(leftButton,<sp/>NULL);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>create<sp/>a<sp/>label<sp/>inside<sp/>the<sp/>button<sp/>and<sp/>get<sp/>a<sp/>pointer<sp/>to<sp/>it.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_label_set_align(leftLabel,<sp/>LV_ALIGN_CENTER);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_label_set_text(leftLabel,<sp/>LV_SYMBOL_PLAY);<sp/><sp/></highlight><highlight class="comment">//<sp/>fixed<sp/>image</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_obj_add_style(leftButton,<sp/>LV_OBJ_PART_MAIN,<sp/><ref refid="Styles_8cpp_1a019535cffcb630e7a726e8b82fb900d4" kindref="member">getSideButtonStyle</ref>());<sp/><sp/></highlight><highlight class="comment">//<sp/>apply<sp/>style<sp/>to<sp/>the<sp/>button.<sp/>label<sp/>style<sp/>is<sp/>set<sp/>by<sp/>&quot;inheritance&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_obj_set_size(leftButton,40,120);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_obj_align(leftButton,<sp/>cont,<sp/>LV_ALIGN_IN_BOTTOM_LEFT,<sp/>0,<sp/>0);<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>place<sp/>the<sp/>button<sp/>relative<sp/>to<sp/>the<sp/>display<sp/>area</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_obj_t<sp/>*rightButton<sp/>=<sp/>lv_btn_create(cont,<sp/>NULL);<sp/></highlight><highlight class="comment">//<sp/>create<sp/>a<sp/>button<sp/>to<sp/>put<sp/>the<sp/>label<sp/>to<sp/>display<sp/>info<sp/>inside<sp/>it.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_obj_set_event_cb(rightButton,<sp/>rightButtonEventHandler);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>rightLabel<sp/>=<sp/>lv_label_create(rightButton,<sp/>NULL);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>create<sp/>a<sp/>label<sp/>inside<sp/>the<sp/>button<sp/>and<sp/>get<sp/>a<sp/>pointer<sp/>to<sp/>it.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_label_set_align(rightLabel,<sp/>LV_ALIGN_CENTER);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_label_set_text(rightLabel,<sp/>LV_SYMBOL_PAUSE);<sp/><sp/></highlight><highlight class="comment">//<sp/>fixed<sp/>image</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_obj_add_style(rightButton,<sp/>LV_OBJ_PART_MAIN,<sp/><ref refid="Styles_8cpp_1a019535cffcb630e7a726e8b82fb900d4" kindref="member">getSideButtonStyle</ref>());<sp/><sp/></highlight><highlight class="comment">//<sp/>apply<sp/>style<sp/>to<sp/>the<sp/>button.<sp/>label<sp/>style<sp/>is<sp/>set<sp/>by<sp/>&quot;inheritance&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_obj_set_size(rightButton,40,120);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_obj_align(rightButton,<sp/>cont,<sp/>LV_ALIGN_IN_BOTTOM_LEFT,<sp/>0+45,<sp/>0);<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>place<sp/>the<sp/>button<sp/>relative<sp/>to<sp/>the<sp/>display<sp/>area</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="172"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="DateTimeScreen_8cpp_1a4731732655268e1bd1d8744b3b6d5c11" kindref="member">buildWatchFace</ref><sp/>()<sp/>{</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//lv_obj_t<sp/>*cont<sp/>=<sp/>lv_scr_act();<sp/>//<sp/>get<sp/>a<sp/>pointer<sp/>to<sp/>the<sp/>current<sp/>screen</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>cont=lv_obj_create<sp/>(NULL,<sp/>NULL);<sp/></highlight><highlight class="comment">//<sp/>https://docs.lvgl.io/latest/en/html/widgets/obj.html#screens</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_obj_add_style(cont,<sp/>LV_OBJ_PART_MAIN,<sp/><ref refid="Styles_8cpp_1ac61b53571d11d7d6ee80860e2e8fdcd0" kindref="member">getBkgdStyle</ref>());<sp/><sp/></highlight><highlight class="comment">//<sp/>apply<sp/>style</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/>createTimeButton(cont);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*info<sp/>bar<sp/>on<sp/>the<sp/>top<sp/>of<sp/>the<sp/>screen*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>createInfoBar(cont);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>activity<sp/>roller<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>rola<sp/>(para<sp/>selecionar)<sp/>e<sp/>então<sp/>clica!!!<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>createRoller(cont);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*buttons<sp/>at<sp/>the<sp/>sides<sp/>of<sp/>the<sp/>roller.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/>createSideButtons(cont);<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="190"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="DateTimeScreen_8cpp_1afcee8927440972f20beaf04b3e3f82c1" kindref="member">displayWatchFace</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_scr_load(cont);<sp/></highlight><highlight class="comment">//<sp/>load<sp/>the<sp/>screen<sp/>onto<sp/>the<sp/>display.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(curLev==0)<sp/>curLev=10;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="HardwareAbstraction_8cpp_1ad818ce1edea73bf8ef4a499a068164f3" kindref="member">setDisplayBrightness</ref>(curLev);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/>setCpuFrequencyMhz(100);<sp/></highlight><highlight class="comment">//<sp/>need<sp/>more<sp/>than<sp/>10MHz<sp/>to<sp/>get<sp/>fluid<sp/>navigation<sp/>on<sp/>roller.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="198"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight><highlight class="comment">//#endif</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/fabio/Arduino/MyLvglWatch-20220910/DateTimeScreen.cpp"/>
+  </compounddef>
+</doxygen>

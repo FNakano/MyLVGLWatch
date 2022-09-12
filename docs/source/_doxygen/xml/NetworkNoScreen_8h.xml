@@ -1,0 +1,201 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="NetworkNoScreen_8h" kind="file" language="C++">
+    <compoundname>NetworkNoScreen.h</compoundname>
+    <includes refid="config_8h" local="yes">config.h</includes>
+    <includes local="no">WiFi.h</includes>
+    <includes local="yes">time.h</includes>
+    <includes local="yes">driver/adc.h</includes>
+    <includedby refid="FSWebServerNoScreen_8cpp" local="yes">/home/fabio/Arduino/MyLvglWatch-20220910/FSWebServerNoScreen.cpp</includedby>
+    <includedby refid="NetworkNoScreen_8cpp" local="yes">/home/fabio/Arduino/MyLvglWatch-20220910/NetworkNoScreen.cpp</includedby>
+    <includedby refid="WSScreen_8cpp" local="yes">/home/fabio/Arduino/MyLvglWatch-20220910/WSScreen.cpp</includedby>
+    <incdepgraph>
+      <node id="6">
+        <label>driver/adc.h</label>
+      </node>
+      <node id="5">
+        <label>time.h</label>
+      </node>
+      <node id="1">
+        <label>/home/fabio/Arduino/MyLvglWatch-20220910/NetworkNoScreen.h</label>
+        <link refid="NetworkNoScreen_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>LilyGoWatch.h</label>
+      </node>
+      <node id="4">
+        <label>WiFi.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/fabio/Arduino/MyLvglWatch-20220910/FSWebServerNoScreen.cpp</label>
+        <link refid="FSWebServerNoScreen_8cpp"/>
+      </node>
+      <node id="3">
+        <label>/home/fabio/Arduino/MyLvglWatch-20220910/NetworkNoScreen.cpp</label>
+        <link refid="NetworkNoScreen_8cpp"/>
+      </node>
+      <node id="1">
+        <label>/home/fabio/Arduino/MyLvglWatch-20220910/NetworkNoScreen.h</label>
+        <link refid="NetworkNoScreen_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="NetworkNoScreen_8h_1a9acee2b781e6cef9333195d2266bb534" prot="public" static="no">
+        <name>WIFI_FAILED_TO_CONNECT</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/NetworkNoScreen.h" line="10" column="9" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/NetworkNoScreen.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="NetworkNoScreen_8h_1ae832b499f748265e296df3cbaf8065ae" prot="public" static="no">
+        <name>WIFI_CONNECTED</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/NetworkNoScreen.h" line="11" column="9" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/NetworkNoScreen.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="NetworkNoScreen_8h_1aea171c38af764998bab0cdc670fcb882" prot="public" static="no">
+        <name>WIFI_NTP_CLOCK_SET</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/NetworkNoScreen.h" line="13" column="9" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/NetworkNoScreen.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="NetworkNoScreen_8h_1a94b3371f3014d697e9cf7cafd876d08f" prot="public" static="no">
+        <name>WIFI_NTP_FAILED</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/NetworkNoScreen.h" line="14" column="9" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/NetworkNoScreen.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="NetworkNoScreen_8h_1aa70dd1a4d3251d20a5a001013f0bb596" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wiFiOff</definition>
+        <argsstring>()</argsstring>
+        <name>wiFiOff</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Turn wifi off </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/NetworkNoScreen.h" line="19" column="6" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/NetworkNoScreen.cpp" bodystart="22" bodyend="30" declfile="/home/fabio/Arduino/MyLvglWatch-20220910/NetworkNoScreen.h" declline="19" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="NetworkNoScreen_8h_1a40d26e533935b20ac90a7b3b46945bd8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wiFiOn</definition>
+        <argsstring>()</argsstring>
+        <name>wiFiOn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Turn wifi on </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/NetworkNoScreen.h" line="24" column="5" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/NetworkNoScreen.cpp" bodystart="32" bodyend="53" declfile="/home/fabio/Arduino/MyLvglWatch-20220910/NetworkNoScreen.h" declline="24" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="NetworkNoScreen_8h_1ac09d49a5bcbab63c67fbf63e3eadc043" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int setClockNTP</definition>
+        <argsstring>()</argsstring>
+        <name>setClockNTP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adjust clock using network time. Need Wifi turned on. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/NetworkNoScreen.h" line="30" column="5" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/NetworkNoScreen.cpp" bodystart="55" bodyend="81" declfile="/home/fabio/Arduino/MyLvglWatch-20220910/NetworkNoScreen.h" declline="30" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="NetworkNoScreen_8h_1ae3d8af61d86af4fa3c59e6b94b5cdee9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* getIP</definition>
+        <argsstring>()</argsstring>
+        <name>getIP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get IP address. It can be used to connect a web browser to the watch. <simplesect kind="return"><para>IP address as a string eg. 192.168.0.100 </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/fabio/Arduino/MyLvglWatch-20220910/NetworkNoScreen.h" line="36" column="12" bodyfile="/home/fabio/Arduino/MyLvglWatch-20220910/NetworkNoScreen.cpp" bodystart="83" bodyend="87" declfile="/home/fabio/Arduino/MyLvglWatch-20220910/NetworkNoScreen.h" declline="36" declcolumn="12"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>NETWORKNOSCREEN_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NETWORKNOSCREEN_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="config_8h" kindref="compound">config.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;WiFi.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;time.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;driver/adc.h&quot;</highlight><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>adc<sp/>functions.<sp/>Needed<sp/>to<sp/>turn<sp/>WiFi<sp/>off.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WIFI_FAILED_TO_CONNECT<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WIFI_CONNECTED<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WIFI_NTP_CLOCK_SET<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WIFI_NTP_FAILED<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="NetworkNoScreen_8cpp_1aa70dd1a4d3251d20a5a001013f0bb596" kindref="member">wiFiOff</ref><sp/>();</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="NetworkNoScreen_8cpp_1a40d26e533935b20ac90a7b3b46945bd8" kindref="member">wiFiOn</ref><sp/>();</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="NetworkNoScreen_8cpp_1ac09d49a5bcbab63c67fbf63e3eadc043" kindref="member">setClockNTP</ref>();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="NetworkNoScreen_8cpp_1ae3d8af61d86af4fa3c59e6b94b5cdee9" kindref="member">getIP</ref><sp/>();</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/fabio/Arduino/MyLvglWatch-20220910/NetworkNoScreen.h"/>
+  </compounddef>
+</doxygen>
