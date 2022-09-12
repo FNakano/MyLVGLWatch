@@ -6,7 +6,7 @@
 Welcome to MyLVGLWatch's documentation!
 =======================================
 
-..image:: junto.jpg
+.. image:: junto.jpg
 
 - Target zero: know what is this;
 - Target 1: deploy the test explained above;
