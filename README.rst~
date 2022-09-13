@@ -10,3 +10,9 @@ A LVGL + TTGO T-Watch test with documentation
    - replaced ``index.rst`` and created/copied folder ``api``;
 #. Add, commit, push;
 #. Deploy to RTD;
+
+Result: The file hierarchy is accessed in https://mylvglwatch.readthedocs.io/en/latest/api/library_root.html# but the documentation embedded as comments in the source-code is not shown. 
+
+#. Change ``conf.py`` to run `breathe`;
+#. add folder ``_doxygen`` and its contents;
+

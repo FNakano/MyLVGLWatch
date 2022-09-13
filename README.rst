@@ -16,3 +16,4 @@ Result: The file hierarchy is accessed in https://mylvglwatch.readthedocs.io/en/
 #. Change ``conf.py`` to run `breathe`;
 #. add folder ``_doxygen`` and its contents;
 
+Result: RTD compilation failed. It did not find ``breathe``. Googled to a solution. Found: https://github.com/michaeljones/breathe/issues/89 and https://github.com/Cruel/readthedocs-breathe/tree/master/docs. Noticed that I missed file ``requirements.txt``. Included it to my repo. It compiled and the source-code embedded documentation appeared.
