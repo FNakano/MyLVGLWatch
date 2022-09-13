@@ -15,12 +15,12 @@ This is a personal activity annotator built on a programmable wristwatch.
 
 The watch owner selects, through watch's touchscreen, what activity is starting. The selected activity, date and time of the activity is recorded. The records can be seen on any device with a web browser and wifi connection. (Detailed information in `How to use the personal activity annotator`).
 
-It is a sort of DIY device (no warranties and some work to get it going :sweat_smile: ).
+It is a sort of DIY device (no warranties and some work to get it going 🙂 ).
 
 How to get one
 --------------
 
-With minimum downloads and tools
+with minimum downloads and tools
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 - Get a TTGO T-Watch (tested with 2020 v.3) programmable watch;
@@ -30,8 +30,8 @@ With minimum downloads and tools
 - Connect the watch to the desktop with a USB data cable;
 - Open the terminal, send the program with the command: ``python3 /home/fabio/.arduino15/packages/esp32/tools/esptool_py/3.3.0/esptool.py --chip esp32 --port /dev/ttyACM0 --baud 2000000 --before default_reset --after hard_reset write_flash -z --flash_mode dio --flash_freq 80m --flash_size 16MB 0x1000 /tmp/arduino_build_299108/MyLvglWatch-20220910.ino.bootloader.bin 0x8000 /tmp/arduino_build_299108/MyLvglWatch-20220910.ino.partitions.bin 0xe000 /home/fabio/.arduino15/packages/esp32/hardware/esp32/2.0.4/tools/partitions/boot_app0.bin 0x10000 /tmp/arduino_build_299108/MyLvglWatch-20220910.ino.bin``
 
-Installing with development environment
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+with development environment installation 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 - Get a TTGO T-Watch (tested with 2020 v.3) programmable watch;
 - Get a desktop computer to program the watch;
@@ -53,7 +53,22 @@ Installing with development environment
 How to use the personal activity annotator
 ------------------------------------------
 
-TODO
+TBD
+
+Nuts and bolts
+--------------
+
+TBD
+
+Source-code explained
+^^^^^^^^^^^^^^^^^^^^^
+
+TBD
+
+How to improve the program
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+TBD
 
 My documentation project milestones
 -----------------------------------
@@ -65,20 +80,6 @@ My documentation project milestones
 - Target 2: learn what was done (and the underlying ideas);
 - Target 3: learn how to expand it;
 - Target 4: learn how to create the github repository and the RTD documentation
-
-
-Instructions to build binaries: https://randomnerdtutorials.com/bin-binary-files-sketch-arduino-ide/
-
-Folder containg binaries: `bin`
-
-Send binaries to the watch: python3 /home/fabio/.arduino15/packages/esp32/tools/esptool_py/3.3.0/esptool.py --chip esp32 --port /dev/ttyACM0 --baud 2000000 --before default_reset --after hard_reset write_flash -z --flash_mode dio --flash_freq 80m --flash_size 16MB 0x1000 /tmp/arduino_build_299108/MyLvglWatch-20220910.ino.bootloader.bin 0x8000 /tmp/arduino_build_299108/MyLvglWatch-20220910.ino.partitions.bin 0xe000 /home/fabio/.arduino15/packages/esp32/hardware/esp32/2.0.4/tools/partitions/boot_app0.bin 0x10000 /tmp/arduino_build_299108/MyLvglWatch-20220910.ino.bin 
-
-
-The source-code repository is: https://github.com/FNakano/MyLVGLWatch
-
-References to ReST: https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#images, 
-
-References to source-code documentation: https://doxygen.nl/manual/docblocks.html
 
 .. toctree::
    :maxdepth: 2
@@ -94,3 +95,21 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
+
+Instructions to build binaries: https://randomnerdtutorials.com/bin-binary-files-sketch-arduino-ide/
+
+Folder containg binaries: `bin`
+
+Send binaries to the watch: python3 /home/fabio/.arduino15/packages/esp32/tools/esptool_py/3.3.0/esptool.py --chip esp32 --port /dev/ttyACM0 --baud 2000000 --before default_reset --after hard_reset write_flash -z --flash_mode dio --flash_freq 80m --flash_size 16MB 0x1000 /tmp/arduino_build_299108/MyLvglWatch-20220910.ino.bootloader.bin 0x8000 /tmp/arduino_build_299108/MyLvglWatch-20220910.ino.partitions.bin 0xe000 /home/fabio/.arduino15/packages/esp32/hardware/esp32/2.0.4/tools/partitions/boot_app0.bin 0x10000 /tmp/arduino_build_299108/MyLvglWatch-20220910.ino.bin 
+
+
+The source-code repository is: https://github.com/FNakano/MyLVGLWatch
+
+References to ReST: https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#images, 
+
+References to source-code documentation: https://doxygen.nl/manual/docblocks.html
+
+References to emojis: https://gist.github.com/rxaviers/7360908, https://github.com/ikatyang/emoji-cheat-sheet, https://github.com/konveyor/pelorus/pull/320
+
+emojipedia: https://emojipedia.org/
+
