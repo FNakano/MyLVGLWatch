@@ -156,28 +156,28 @@ The layer model is implemented in source-code files. Relation between layers and
 
 Directory tree
 
-.
-├── config.h
-├── data
-│   ├── edit.htm.gz
-│   ├── favicon.ico
-│   ├── graphs.js.gz
-│   └── index.htm
-├── DateTimeScreen.cpp
-├── DateTimeScreen.h
-├── FSWebServerNoScreen.cpp
-├── FSWebServerNoScreen.h
-├── HardwareAbstraction.cpp
-├── HardwareAbstraction.h
-├── MyLvglWatch-20220910.ino
-├── MyLvglWatch-20220910.ino.twatch.bin
-├── nbubb80.c
-├── NetworkNoScreen.cpp
-├── NetworkNoScreen.h
-├── Styles.cpp
-├── Styles.h
-├── WSScreen.cpp
-└── WSScreen.h
+   .
+   ├── config.h
+   ├── data
+   │   ├── edit.htm.gz
+   │   ├── favicon.ico
+   │   ├── graphs.js.gz
+   │   └── index.htm
+   ├── DateTimeScreen.cpp
+   ├── DateTimeScreen.h
+   ├── FSWebServerNoScreen.cpp
+   ├── FSWebServerNoScreen.h
+   ├── HardwareAbstraction.cpp
+   ├── HardwareAbstraction.h
+   ├── MyLvglWatch-20220910.ino
+   ├── MyLvglWatch-20220910.ino.twatch.bin
+   ├── nbubb80.c
+   ├── NetworkNoScreen.cpp
+   ├── NetworkNoScreen.h
+   ├── Styles.cpp
+   ├── Styles.h
+   ├── WSScreen.cpp
+   └── WSScreen.h
 
 One screen defining files (e.g. DateTimeScreen.cpp) should contain functions that implement one screen, its graphical objects, associate the objects to callback function (event handling functions), data refreshing (if necessary) and insert tasks into the LVGL event loop.
 
