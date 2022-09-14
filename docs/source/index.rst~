@@ -44,9 +44,47 @@ Activity text is named *tag* because its meaning is not fixated. It is convenien
 
 In a particular use a more precise meaning is possible:
 
-.. table:
-
-
+.. list-table:: more precise meaning for the tags.
+   :header-rows: 1
+   
+   * - tag (EN)
+     - tag (pt-BR)
+     - meaning
+   * -  Ride (play button)
+     - Wait (pause button) 
+     - Walk 
+     - Office 
+     - Eat 
+     - Home 
+     - Stroll 
+     - Shop 
+     - Exercise 
+     - Rest 
+     - Group
+   * - Rodar (play button)
+     - Esperar (pause button) 
+     - Caminhar 
+     - Oficina 
+     - Comer 
+     - Casa 
+     - Passear 
+     - Comprar 
+     - Exercitar 
+     - Descansar 
+     - Grupo
+   * - Ride a vehicle (to a known place)
+     - Wait for somthing or someone (for a vehicle, for a meeting,...)
+     - Walk to a target place (office, home, shopping area)
+     - Office hours (work!)
+     - Eat (usual meal: breakfast, lunch, dinner)
+     - Home chores (do the dishes, cook, clean,...)
+     - Go for a stroll, wander (without definite place to go)
+     - Shop (go shopping something known in advance. Walk the shopping area is included.)
+     - Exercise (some activity intended to physical training)
+     - Rest (sleep, relax, selfcare)
+     - Group (attend a meeting, conference, class, ...) 
+     
+   
 How to get one
 --------------
 
@@ -83,7 +121,28 @@ with development environment installation
 Nuts and bolts
 --------------
 
-TBD
+Here is the geek part.
+
+PAL can be seen (modeled) as a stack of layers, each layer representing some object(s) and/or implementing some funtionality. This model can be adopted as a *design principle*, which may result in better organized source-code.
+
+As a convention, layers near to the physical device are placed below and layers near to the application program are placed above. The bottom layer represents hardware. It aggregates touch sensor, hardware button, accelerometer, speaker, microphone, screen, power management unit and microcontroler (with embedded wifi, bluetooth, real-time clock and ultra low power processor). 
+
+Above the hardware layer, as much as necessary software (program) layers can be stacked. 
+
+In this particular design there is a Graphical User Interface (GUI) layer. It abstracts out display and touch-screen hardware details and provide graphical objects (containers, buttons, text, menus, ...).  It is implemented with LVGL (https://lvgl.io).
+
+These two layers are provided, by their respective developers, packed in a product: TTGO T-Watch (http://www.lilygo.cn/prod_view.aspx?TypeId=50053&Id=1380&FId=t3:50053:3). The example programs (I learned a lot from them) are provided in Arduino IDE and from https://github.com/Xinyuan-LilyGO/TTGO_TWatch_Library.
+
+Besides GUI layer, I defined a Hardware Abstraction (HA) Layer to group/encapsulate hardware details and provide a cleaner interface to the hardware.
+
+PAL funcionalities with no screen associated, such as networking, web serving, date/time adjusting are grouped in a funcionalities layer.
+
+Finally, screen definition (graphical objects styling, placing, navigating, event handling) are built Over GUI and HA layers and comprise an application layer.
+
+.. figure:: PAL-layerModel.png
+   :alt: layer model
+   
+   Figure 2 - Layer model of PAL. 
 
 Source-code explained
 ^^^^^^^^^^^^^^^^^^^^^

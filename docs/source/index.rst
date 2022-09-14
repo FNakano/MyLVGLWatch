@@ -9,7 +9,7 @@ Welcome to MyLVGLWatch's documentation!
 .. figure:: junto.jpg
    :alt: watch faces and states
    
-   watch *sleeping* (leftmost), displaying time (center), in data transfer state (right) 
+   Figure 1: watch *sleeping* (leftmost), displaying time (center), in data transfer state (right) 
 
 What is this?
 -------------
@@ -23,11 +23,11 @@ It is a sort of DIY device (no warranties and some work to get it going 🙂 ).
 How to use the personal activity logger
 ------------------------------------------
 
-PAL more frequent state is screen off, counting time, waiting for the owner to touch its screen. It is, in some sense, *sleeping*. By touching the screen it turns on, displaying time.
+PAL more frequent state is screen off, counting time, waiting for the owner to touch its screen (Figure 1 - right). It is, in some sense, *sleeping*. By touching the screen it turns on, displaying time.
 
-In display time state, screen brightness can be improved by touching on time. Clicking *play* button inserts a *rodar* activity in the log. Clicking *pause* button inserts a *esperar* activity in the log. Other activities may be selected on the rolling menu at the right of the buttons. After selecting an activity, click on it to insert it in the log. There is a information bar, displaying date and battery charge, at the top of the screen. Touching it will switch the watch to the data transfer state.
+In display time state (Figure 1 - center), screen brightness can be improved by touching on time. Clicking *play* button inserts a *rodar* activity in the log. Clicking *pause* button inserts a *esperar* activity in the log. Other activities may be selected on the rolling menu at the right of the buttons. After selecting an activity, click on it to insert it in the log. There is a information bar, displaying date and battery charge, at the top of the screen. Touching it will switch the watch to the data transfer state.
 
-In data transfer state there is a button to exit the screen (back to display time screen), a text (more precisely an IP address) and a button to toggle transfer mode on/off. With *transfer mode on*, PAL tries to connect do *NameOfNetworkTP* network with password *0123456789*. Upon connection, the watch's IP address is displayed as text. In this state, another device (e.g. desktop), connected to the same network, can access the activity log by typing ``IP/eventLog.csv``. The activity log can be copied (downloaded) to the desktop, opened in a spreadsheet and its contents can be studied.
+In data transfer state (Figure 1 - left) there is a button to exit the screen (back to display time screen), a text (more precisely an IP address) and a button to toggle transfer mode on/off. With *transfer mode on*, PAL tries to connect do *NameOfNetworkTP* network with password *0123456789*. Upon connection, the watch's IP address is displayed as text. In this state, another device (e.g. desktop), connected to the same network, can access the activity log by typing ``IP/eventLog.csv``. The activity log can be copied (downloaded) to the desktop, opened in a spreadsheet and its contents can be studied.
 
 Data transfer mode demands a lot from the battery. I recommend using it for as short as possible time, or plugging the watch to its charger.
 
@@ -46,6 +46,7 @@ In a particular use a more precise meaning is possible:
 
 .. list-table:: more precise meaning for the tags.
    :header-rows: 1
+   
    * - tag (EN)
      - tag (pt-BR)
      - meaning
@@ -71,17 +72,17 @@ In a particular use a more precise meaning is possible:
      - Exercitar 
      - Descansar 
      - Grupo
-   * - Rodar (play button)
-     - Esperar (pause button) 
-     - Caminhar 
-     - Oficina 
-     - Comer 
-     - Casa 
-     - Passear 
-     - Comprar 
-     - Exercitar 
-     - Descansar 
-     - Grupo
+   * - Ride a vehicle (to a known place)
+     - Wait for somthing or someone (for a vehicle, for a meeting,...)
+     - Walk to a target place (office, home, shopping area)
+     - Office hours (work!)
+     - Eat (usual meal: breakfast, lunch, dinner)
+     - Home chores (do the dishes, cook, clean,...)
+     - Go for a stroll, wander (without definite place to go)
+     - Shop (go shopping something known in advance. Walk the shopping area is included.)
+     - Exercise (some activity intended to physical training)
+     - Rest (sleep, relax, selfcare)
+     - Group (attend a meeting, conference, class, ...) 
      
    
 How to get one
@@ -120,7 +121,28 @@ with development environment installation
 Nuts and bolts
 --------------
 
-TBD
+Here is the geek part.
+
+PAL can be seen (modeled) as a stack of layers, each layer representing some object(s) and/or implementing some funtionality. This model can be adopted as a *design principle*, which may result in better organized source-code.
+
+As a convention, layers near to the physical device are placed below and layers near to the application program are placed above. The bottom layer represents hardware. It aggregates touch sensor, hardware button, accelerometer, speaker, microphone, screen, power management unit and microcontroler (with embedded wifi, bluetooth, real-time clock and ultra low power processor). 
+
+Above the hardware layer, as much as necessary software (program) layers can be stacked. 
+
+In this particular design there is a Graphical User Interface (GUI) layer. It abstracts out display and touch-screen hardware details and provide graphical objects (containers, buttons, text, menus, ...).  It is implemented with LVGL (https://lvgl.io).
+
+These two layers are provided, by their respective developers, packed in a product: TTGO T-Watch (http://www.lilygo.cn/prod_view.aspx?TypeId=50053&Id=1380&FId=t3:50053:3). The example programs (I learned a lot from them) are provided in Arduino IDE and from https://github.com/Xinyuan-LilyGO/TTGO_TWatch_Library.
+
+Besides GUI layer, I defined a Hardware Abstraction (HA) Layer to group/encapsulate hardware details and provide a cleaner interface to the hardware.
+
+PAL funcionalities with no screen associated, such as networking, web serving, date/time adjusting are grouped in a funcionalities layer.
+
+Finally, screen definition (graphical objects styling, placing, navigating, event handling) are built Over GUI and HA layers and comprise an application layer.
+
+.. figure:: PAL-layerModel.png
+   :alt: layer model
+   
+   Figure 2 - Layer model of PAL. 
 
 Source-code explained
 ^^^^^^^^^^^^^^^^^^^^^
