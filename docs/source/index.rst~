@@ -204,12 +204,16 @@ Still on event loops, events (and taks) are serviced through *callback fuctions*
 
 LVGL event loop is explicitly executed in ``loop()`` function of ``.ino`` file.
 
+API documentation generated with ``exhale``, ``doxygen``, ``breathe`` and ``sphinx``.
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
    about
    api/library_root
+
+
 
 My documentation project milestones
 -----------------------------------
