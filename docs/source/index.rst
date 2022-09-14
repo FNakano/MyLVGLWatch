@@ -50,38 +50,38 @@ In a particular use a more precise meaning is possible:
    * - tag (EN)
      - tag (pt-BR)
      - meaning
-   * -  Ride (play button)
-     - Wait (pause button) 
-     - Walk 
-     - Office 
-     - Eat 
-     - Home 
-     - Stroll 
-     - Shop 
-     - Exercise 
-     - Rest 
-     - Group
-   * - Rodar (play button)
+   * - Ride (play button)
+     - Rodar (play button)
+     - Ride a vehicle (to a known place)
+   * - Wait (pause button) 
      - Esperar (pause button) 
-     - Caminhar 
-     - Oficina 
-     - Comer 
-     - Casa 
-     - Passear 
-     - Comprar 
-     - Exercitar 
-     - Descansar 
-     - Grupo
-   * - Ride a vehicle (to a known place)
      - Wait for somthing or someone (for a vehicle, for a meeting,...)
+   * - Walk 
+     - Caminhar 
      - Walk to a target place (office, home, shopping area)
+   * - Office 
+     - Oficina 
      - Office hours (work!)
+   * - Eat 
+     - Comer 
      - Eat (usual meal: breakfast, lunch, dinner)
-     - Home chores (do the dishes, cook, clean,...)
+   * - Home 
+     - Casa 
+     - Housekeeping (do the dishes, cook, clean,...)
+   * - Stroll 
+     - Passear 
      - Go for a stroll, wander (without definite place to go)
+   * - Shop 
+     - Comprar 
      - Shop (go shopping something known in advance. Walk the shopping area is included.)
+   * - Exercise 
+     - Exercitar 
      - Exercise (some activity intended to physical training)
+   * - Rest 
+     - Descansar 
      - Rest (sleep, relax, selfcare)
+   * - Group
+     - Grupo
      - Group (attend a meeting, conference, class, ...) 
      
    
@@ -147,12 +147,90 @@ Finally, screen definition (graphical objects styling, placing, navigating, even
 Source-code explained
 ^^^^^^^^^^^^^^^^^^^^^
 
-TBD
+The layer model is implemented in source-code files. Relation between layers and files is provided in Figure 3.
+
+.. figure:: PAL-layerModelWithFiles.png
+   :alt: layers and files
+   
+   Figure 3 - Relation between source-code files and layers of PAL. 
+
+Directory tree
+
+.. raw:: html
+
+   <embed>
+      <head>
+       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+       <meta name="Author" content="Made by 'tree'">
+       <meta name="GENERATOR" content="$Version: $ tree v1.8.0 (c) 1996 - 2018 by Steve Baker, Thomas Moore, Francesc Rocher, Florian Sesser, Kyosuke Tokoro $">
+       <title>Directory Tree</title>
+       <style type="text/css">
+        <!-- 
+        BODY { font-family : ariel, monospace, sans-serif; }
+        P { font-weight: normal; font-family : ariel, monospace, sans-serif; color: black; background-color: transparent;}
+        B { font-weight: normal; color: black; background-color: transparent;}
+        A:visited { font-weight : normal; text-decoration : none; background-color : transparent; margin : 0px 0px 0px 0px; padding : 0px 0px 0px 0px; display: inline; }
+        A:link    { font-weight : normal; text-decoration : none; margin : 0px 0px 0px 0px; padding : 0px 0px 0px 0px; display: inline; }
+        A:hover   { color : #000000; font-weight : normal; text-decoration : underline; background-color : yellow; margin : 0px 0px 0px 0px; padding : 0px 0px 0px 0px; display: inline; }
+        A:active  { color : #000000; font-weight: normal; background-color : transparent; margin : 0px 0px 0px 0px; padding : 0px 0px 0px 0px; display: inline; }
+        .VERSION { font-size: small; font-family : arial, sans-serif; }
+        .NORM  { color: black;  background-color: transparent;}
+        .FIFO  { color: purple; background-color: transparent;}
+        .CHAR  { color: yellow; background-color: transparent;}
+        .DIR   { color: blue;   background-color: transparent;}
+        .BLOCK { color: yellow; background-color: transparent;}
+        .LINK  { color: aqua;   background-color: transparent;}
+        .SOCK  { color: fuchsia;background-color: transparent;}
+        .EXEC  { color: green;  background-color: transparent;}
+        -->
+       </style>
+      </head>
+      <body>
+         <h1>Directory Tree</h1><p>
+         <a href=".">.</a><br>
+         ├── <a href="./config.h">config.h</a><br>
+         ├── <a href="./data/">data</a><br>
+         │   ├── <a href="./data/edit.htm.gz">edit.htm.gz</a><br>
+         │   ├── <a href="./data/favicon.ico">favicon.ico</a><br>
+         │   ├── <a href="./data/graphs.js.gz">graphs.js.gz</a><br>
+         │   └── <a href="./data/index.htm">index.htm</a><br>
+         ├── <a href="./DateTimeScreen.cpp">DateTimeScreen.cpp</a><br>
+         ├── <a href="./DateTimeScreen.h">DateTimeScreen.h</a><br>
+         ├── <a href="./FSWebServerNoScreen.cpp">FSWebServerNoScreen.cpp</a><br>
+         ├── <a href="./FSWebServerNoScreen.h">FSWebServerNoScreen.h</a><br>
+         ├── <a href="./HardwareAbstraction.cpp">HardwareAbstraction.cpp</a><br>
+         ├── <a href="./HardwareAbstraction.h">HardwareAbstraction.h</a><br>
+         ├── <a href="./MyLvglWatch-20220910.ino">MyLvglWatch-20220910.ino</a><br>
+         ├── <a href="./MyLvglWatch-20220910.ino.twatch.bin">MyLvglWatch-20220910.ino.twatch.bin</a><br>
+         ├── <a href="./nbubb80.c">nbubb80.c</a><br>
+         ├── <a href="./NetworkNoScreen.cpp">NetworkNoScreen.cpp</a><br>
+         ├── <a href="./NetworkNoScreen.h">NetworkNoScreen.h</a><br>
+         ├── <a href="./Styles.cpp">Styles.cpp</a><br>
+         ├── <a href="./Styles.h">Styles.h</a><br>
+         ├── <a href="./WSScreen.cpp">WSScreen.cpp</a><br>
+         └── <a href="./WSScreen.h">WSScreen.h</a><br>
+         <br><br>
+         </p>
+         <p>
+         1 directory, 20 files
+         <br><br>
+         </p>
+         <hr>
+         <p class="VERSION">
+             tree v1.8.0 © 1996 - 2018 by Steve Baker and Thomas Moore <br>
+             HTML output hacked and copyleft © 1998 by Francesc Rocher <br>
+             JSON output hacked and copyleft © 2014 by Florian Sesser <br>
+             Charsets / OS/2 support © 2001 by Kyosuke Tokoro
+         </p>
+      </body>
+   </embed>
+
+One screen defining files (e.g. DateTimeScreen.cpp) should contain functions that implement one screen, its graphical objects, associate the objects to callback function (event handling functions), data refreshing (if necessary) and insert tasks into the LVGL event loop.
 
 How to improve the program
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-TBD
+Create screens in its own files (e.g. DateTimeScreen.cpp), create funcionalities in its own files (e.g. FSWebServerNoScreen.cpp) , abstract out hardware details (e.g. ``static TTGOClass *ttgo``, control variables, private functions and data types) into ``HardwareAbstraction.cpp``.
 
 My documentation project milestones
 -----------------------------------
