@@ -156,12 +156,14 @@ The layer model is implemented in source-code files. Relation between layers and
 
 Directory tree
 
-   .
+.. raw:: html
+
+   <pre><font color="#268BD2"><b>.</b></font>
    ├── config.h
-   ├── data
-   │   ├── edit.htm.gz
+   ├── <font color="#268BD2"><b>data</b></font>
+   │   ├── <font color="#DC322F"><b>edit.htm.gz</b></font>
    │   ├── favicon.ico
-   │   ├── graphs.js.gz
+   │   ├── <font color="#DC322F"><b>graphs.js.gz</b></font>
    │   └── index.htm
    ├── DateTimeScreen.cpp
    ├── DateTimeScreen.h
@@ -178,6 +180,7 @@ Directory tree
    ├── Styles.h
    ├── WSScreen.cpp
    └── WSScreen.h
+   </pre>
 
 One screen defining files (e.g. DateTimeScreen.cpp) should contain functions that implement one screen, its graphical objects, associate the objects to callback function (event handling functions), data refreshing (if necessary) and insert tasks into the LVGL event loop.
 
