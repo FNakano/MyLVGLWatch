@@ -156,12 +156,14 @@ The layer model is implemented in source-code files. Relation between layers and
 
 Directory tree
 
-   .
+.. raw:: html
+
+   <pre><font color="#268BD2"><b>.</b></font>
    ├── config.h
-   ├── data
-   │   ├── edit.htm.gz
+   ├── <font color="#268BD2"><b>data</b></font>
+   │   ├── <font color="#DC322F"><b>edit.htm.gz</b></font>
    │   ├── favicon.ico
-   │   ├── graphs.js.gz
+   │   ├── <font color="#DC322F"><b>graphs.js.gz</b></font>
    │   └── index.htm
    ├── DateTimeScreen.cpp
    ├── DateTimeScreen.h
@@ -178,24 +180,29 @@ Directory tree
    ├── Styles.h
    ├── WSScreen.cpp
    └── WSScreen.h
+   </pre>
 
-One screen defining files (e.g. DateTimeScreen.cpp) should contain functions that implement one screen, its graphical objects, associate the objects to callback function (event handling functions), data refreshing (if necessary) and insert tasks into the LVGL event loop.
+One screen defining file (e.g. DateTimeScreen.cpp) should contain functions that implement one screen, its graphical objects, associate the objects to callback function (event handling functions), data refreshing (if necessary) and insert tasks into the LVGL event loop.
+
+One functionality defining file (e.g. FSWebServerNoScreen.cpp) should contain functions that implement related functionalities, getters for information generated in the functionality that should be presented in some screen and initialize,start,finish functions to be calle by a screen defining function. A functionality file should not expose its implementation details (e.g. provide a pointer to an internal variable).
+
+One hardware abstraction function (or file e.g. HardwareAbstraction.cpp) should provide all desired functionality of a specific hardware component while hiding implementation details (e.g. I2C bus initialization and message exchange).
 
 How to improve the program
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Create screens in its own files (e.g. DateTimeScreen.cpp), create funcionalities in its own files (e.g. FSWebServerNoScreen.cpp) , abstract out hardware details (e.g. ``static TTGOClass *ttgo``, control variables, private functions and data types) into ``HardwareAbstraction.cpp``.
 
-My documentation project milestones
------------------------------------
+For further information, check out the Library API and the source-code in github repository: https://github.com/FNakano/MyLVGLWatch.
 
-- Target zero: know what is this;
-- Target 1: deploy the test explained above;
-   - binaries and esptool (fastest if you don't have Arduino IDE installed and configured - just try this test case on your watch);
-   - Arduino IDE, source-code download, compile and deploy (recommended if you want to program the watch);
-- Target 2: learn what was done (and the underlying ideas);
-- Target 3: learn how to expand it;
-- Target 4: learn how to create the github repository and the RTD documentation
+Important notes
+^^^^^^^^^^^^^^^
+
+LVGL implements its own event loop based on cooperative multitasking, which is necessary and sufficient to deal with events and tasks. It is adviced, on its documentation, that preemtively interrupting LVGL functions may cause malfunction. Something I would interpret as: *LVGL functions are not thread-safe*. Consequently (for me), LVGL and FreeRTOS should not be used together. So do LVGL and AsyncWebServer.
+
+Still on event loops, events (and taks) are serviced through *callback fuctions*. On LVGL these should be C functions (not C++ member functions). This can be circumvented but resulting source-code has one more indirection level, making it less readable.
+
+LVGL event loop is explicitly executed in ``loop()`` function of ``.ino`` file.
 
 .. toctree::
    :maxdepth: 2
@@ -204,6 +211,16 @@ My documentation project milestones
    about
    api/library_root
 
+My documentation project milestones
+-----------------------------------
+
+- Target zero: know what is this;
+- Target 1: deploy the test explained above;
+   - binaries and esptool (fastest if you don't have Arduino IDE installed and configured - just try this test case on your watch);
+   - Arduino IDE, source-code download, compile and deploy (recommended if you want to program the watch);
+- Target 2: explain what was done (and the underlying ideas);
+- Target 3: explain how to expand it;
+- Target 4: explain how to create the github repository and the RTD documentation
 
 Indices and tables
 ==================
