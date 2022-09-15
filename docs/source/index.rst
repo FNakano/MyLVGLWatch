@@ -81,6 +81,14 @@ For example, in a particular use, a more precise meaning is possible:
    * - Group
      - Grupo
      - Group (attend a meeting, conference, class, ...) 
+
+The tags were placed according to scenarios:
+
+1. The person has just entered the bus/tram/train/subway and want to log the event. He/She is standing up, in a shaky, crowded place. Logging shoud be easy then *Ride* is in a button;
+2. The person might be in a connection: After leaving the vehicle, the person walks to a bus stop or platform to wait for the next vehicle. It is convenient that *Walk* and *Wait* are easy to log;
+3. Arriving at the office, a meeting has just started. *Group* can be (discretely) pressed even if it is not selected in the menu;
+4. Other personal activities are less critical;
+   
      
 The tag for each activity entry in the log is embedded in the source-code.
    
