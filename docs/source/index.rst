@@ -34,15 +34,13 @@ Data transfer mode demands a lot from the battery. I recommend using it for as s
 About the meaning of the activity names
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The text (tag) for each activity entry in the log is embedded in the source-code. The tags are listed below.
-
-List of activity tags (Brazilian Portuguese as in the initial release): Rodar (play button), Esperar (pause button), Caminhar, Oficina, Comer, Casa, Passear, Comprar, Exercitar, Descansar, Grupo.
+Activity name, more precisely, the text used to refer to an activity, is named *tag* because its meaning is not fixated. It is convenient that tag relates to its meaning, though. Tags are listed below.
 
 List of activity tags (English translation): Ride (play button), Wait (pause button), Walk, Office, Eat, Home, Stroll, Shop, Exercise, Rest, Group.
 
-Activity text is named *tag* because its meaning is not fixated. It is convenient that tag text relates to its meaning, though.
+List of activity tags (Brazilian Portuguese as in the initial release): Rodar (play button), Esperar (pause button), Caminhar, Oficina, Comer, Casa, Passear, Comprar, Exercitar, Descansar, Grupo.
 
-In a particular use a more precise meaning is possible:
+For example, in a particular use, a more precise meaning is possible:
 
 .. list-table:: more precise meaning for the tags.
    :header-rows: 1
@@ -84,6 +82,7 @@ In a particular use a more precise meaning is possible:
      - Grupo
      - Group (attend a meeting, conference, class, ...) 
      
+The tag for each activity entry in the log is embedded in the source-code.
    
 How to get one
 --------------
@@ -215,8 +214,12 @@ API documentation generated with ``exhale``, ``doxygen``, ``breathe`` and ``sphi
 
 
 
-My documentation project milestones
------------------------------------
+My documentation project cornerstones and milestones
+----------------------------------------------------
+
+The person who wrote the documentation has computer programmer background (this influences how documentation was written, including the viewpoint and adjectives used).
+
+The documentation starts targeting at *general public* and progressively specializes to *programmers* who want to improve the object (watch). 
 
 - Target zero: know what is this;
 - Target 1: deploy the test explained above;
