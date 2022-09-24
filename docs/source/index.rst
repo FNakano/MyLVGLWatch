@@ -113,6 +113,7 @@ with development environment installation
 - On the desktop, install ``Arduino IDE`` with support to ``ESP32`` board. (this is the tool to send the program to the watch);
    - some help with Arduino IDE: https://github.com/FNakano/CFA/tree/master/programas/arduinoIDE (Brazilian Portuguese)
    - some help with ESP32 support: https://github.com/FNakano/CFA/tree/master/componentes/controladores/ESP#configurar-arduinoide-para-programar-o-esp8266-ou-o-esp32 (Brazilian Portuguese) 
+- On the desktop, install TTGO T-Watch library (follow instruction there: https://github.com/Xinyuan-LilyGO/TTGO_TWatch_Library#-install);
 - On the desktop, download the files in ``src`` (These are the personal activity annotator program in binary format);
 - Open the file ``MyLvglWatch20220910.ino`` with ``Arduino IDE``;
    - it probably will move the files to a new folder;
