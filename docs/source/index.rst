@@ -194,12 +194,79 @@ One screen defining file (e.g. DateTimeScreen.cpp) should contain functions that
 
 One functionality defining file (e.g. FSWebServerNoScreen.cpp) should contain functions that implement related functionalities, getters for information generated in the functionality that should be presented in some screen and initialize,start,finish functions to be calle by a screen defining function. A functionality file should not expose its implementation details (e.g. provide a pointer to an internal variable).
 
-One hardware abstraction function (or file e.g. HardwareAbstraction.cpp) should provide all desired functionality of a specific hardware component while hiding implementation details (e.g. I2C bus initialization and message exchange).
 
 How to improve the program
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Create screens in its own files (e.g. DateTimeScreen.cpp), create funcionalities in its own files (e.g. FSWebServerNoScreen.cpp) , abstract out hardware details (e.g. ``static TTGOClass *ttgo``, control variables, private functions and data types) into ``HardwareAbstraction.cpp``.
+***Add a button in Date/Time screen (POC)***
+
+*User-level description*: A button to record how many cups of water I drank.
+
+*Programmer description*: A counter (that retains value across *deep-sleeps*), a button to increase or reset the counter and a label to show current counter value. Increase counter is triggered by a *short click event*, reset is triggered by a *long press event*. All these changes can be done in ´DateTimeScreen.cpp`.
+
+*Programmer procedure*:
+
+1. Create the counter (global) variable;
+2. Create the button label (global) variable;
+3. Open space in the screen to place the button;
+4. Create and place the button;
+5. Create the button event callback;
+6. Add the button to the screen;
+
+*Programmer executing the procedure*:
+
+1. Create the counter (global) variable;
+   - `RTC_DATA_ATTR int count = 0;`
+2. Create the button label (global) variable;
+   - `static lv_obj_t *countLabel = NULL;`
+3. Open space in the screen to place the button;
+   - reduce time label:
+      - change `lv_obj_set_size(timeButton,240,100);` to `lv_obj_set_size(timeButton,240,90);`
+   - reduce buttons:
+      - change `lv_obj_set_size(leftButton,40,120);` to `lv_obj_set_size(leftButton,40,80);`
+      - change `lv_obj_set_size(rightButton,40,120);` to `lv_obj_set_size(rightButton,40,80);`
+4. Create and place the button;
+   - adapt (copy, paste, modify) `createSideButtons` to `createCountButton`::
+
+      void createCountButton (lv_obj_t *cont) {
+         lv_obj_t *countButton = lv_btn_create(cont, NULL); // create a button to put the label to display info inside it.
+         lv_obj_set_event_cb(countButton, countButtonEventHandler);            //  
+         countLabel = lv_label_create(countButton, NULL);                 // create a label inside the button and get a pointer to it.
+         lv_label_set_align(countLabel, LV_ALIGN_CENTER);
+         lv_label_set_text_fmt(countLabel, "%d", count);  // count image
+         lv_obj_add_style(countButton, LV_OBJ_PART_MAIN, getSideButtonStyle());  // apply style to the button. label style is set by "inheritance"
+         lv_obj_set_size(countButton,80,35);
+         lv_obj_align(countButton, cont, LV_ALIGN_IN_BOTTOM_LEFT, 0, -82);      // place the button relative to the display area
+      }
+
+5. Create the button event callback;
+   - adapt `leftButtonEventHandler` to `countButtonEventHandler`::
+   
+      static void countButtonEventHandler(lv_obj_t *obj, lv_event_t event)
+      {
+         if (event == LV_EVENT_SHORT_CLICKED) {
+            count++;
+            char buf[]="Agua ; +1";
+            recordEvent(buf);
+            lv_label_set_text_fmt(countLabel, "%d", count);  // display info
+            Serial.printf("Clicked on count button.\n"); 
+         } else if (event==LV_EVENT_LONG_PRESSED) {
+            count=0;
+            char buf[]="Agua ; zero";
+            recordEvent(buf);
+            lv_label_set_text_fmt(countLabel, "%d", count);  // display info
+            Serial.printf("long press on count button.\n"); 
+         }
+      }
+
+6. Add the button to the screen;
+   - in `buildWatchFace` add line::
+   
+      createCountButton(cont);
+
+Resulting source-code in /POC-src/DateTimeScreen.cpp
+
+Create screens in its own files (e.g. AnotherScreen.cpp), create funcionalities in its own files (e.g. FSWebServerNoScreen.cpp) , abstract out hardware details (e.g. ``static TTGOClass *ttgo``, control variables, private functions and data types) into ``HardwareAbstraction.cpp``.
 
 For further information, check out the Library API and the source-code in github repository: https://github.com/FNakano/MyLVGLWatch.
 
