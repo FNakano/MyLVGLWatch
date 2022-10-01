@@ -264,9 +264,9 @@ How to improve the program
    
       createCountButton(cont);
 
-Resulting source-code in /POC-src/DateTimeScreen.cpp
+Resulting source-code in https://github.com/FNakano/MyLVGLWatch/blob/main/POC-src/DateTimeScreen.cpp
 
-Create screens in its own files (e.g. AnotherScreen.cpp), create funcionalities in its own files (e.g. FSWebServerNoScreen.cpp) , abstract out hardware details (e.g. ``static TTGOClass *ttgo``, control variables, private functions and data types) into ``HardwareAbstraction.cpp``.
+Create screens in its own files (e.g. AnotherScreen.cpp, by adapting existing screens), create funcionalities in its own files (e.g. FSWebServerNoScreen.cpp) , abstract out hardware details (e.g. ``static TTGOClass *ttgo``, control variables, private functions and data types) into ``HardwareAbstraction.cpp``.
 
 For further information, check out the Library API and the source-code in github repository: https://github.com/FNakano/MyLVGLWatch.
 
